@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           ],
           background: Container(color: Color(0xFFF5F5F5))),
       debugShowCheckedModeBanner: false,
-      initialRoute: Constants.MAIN_ROUTE,
+      initialRoute: Constants.FIRST_ROUTE,
       routes: routes,
     );
   }

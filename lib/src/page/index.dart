@@ -1,3 +1,4 @@
-export 'mainPage.dart';
-export 'SecondPage.dart';
+export 'mapPage.dart';
+export 'shipPage.dart';
+export 'notiAndNews.dart';
 
