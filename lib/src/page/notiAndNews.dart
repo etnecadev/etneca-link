@@ -4,6 +4,7 @@ import 'package:flutter_project_template/src/component/scaffold/scaffoldWidget.d
 import 'package:flutter_project_template/src/page/index.dart';
 
 class NotiAndNews extends StatelessWidget {
+  static const routeName = '/news';
   const NotiAndNews({Key? key}) : super(key: key);
 
   @override

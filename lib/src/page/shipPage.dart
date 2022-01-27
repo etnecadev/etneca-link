@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SecondPage extends StatefulWidget {
+  static const routeName = '/ship';
   const SecondPage({Key? key}) : super(key: key);
 
   @override
