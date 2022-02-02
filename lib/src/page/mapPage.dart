@@ -1,3 +1,4 @@
+import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -5,7 +6,7 @@ import 'package:flutter_project_template/src/component/scaffold/ScaffoldWidget.d
 import 'package:flutter_project_template/src/page/index.dart';
 
 class MapPage extends StatefulWidget {
-    static const routeName = '/map';
+  static const routeName = '/map';
   const MapPage({Key? key}) : super(key: key);
 
   @override
@@ -22,15 +23,40 @@ class _MapPageState extends State<MapPage> {
   Widget build(BuildContext context) {
     return ScaffoldWidget(
       title: Text(''),
-      child: Container(
-        child: Image.asset(
-          'assets/images/seamap.png',
-          fit: BoxFit.cover,
-          height: double.infinity,
-          width: double.infinity,
-        ),
+      child: Stack(
+        children: [
+          Container(
+            child: Image.asset(
+              'assets/images/seamap.png',
+              fit: BoxFit.cover,
+              height: double.infinity,
+              width: double.infinity,
+            ),
+          ),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () => AdaptiveTheme.of(context).setDark(),
+                  child: Text('Set Dark'),
+                  style: ElevatedButton.styleFrom(
+                    visualDensity: VisualDensity(horizontal: 4, vertical: 2),
+                  ),
+                ),
+                SizedBox(height: 8),
+                ElevatedButton(
+                  onPressed: () => AdaptiveTheme.of(context).setLight(),
+                  child: Text('set Light'),
+                  style: ElevatedButton.styleFrom(
+                    visualDensity: VisualDensity(horizontal: 4, vertical: 2),
+                  ),
+                ),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }
 }
-
