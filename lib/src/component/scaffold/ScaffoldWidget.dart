@@ -1,67 +1,85 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template/src/page/index.dart';
+import 'package:flutter_project_template/src/utils/index.dart';
 
-class ScaffoldWidget extends StatefulWidget {
-  @override
-  _ScaffoldWidgetState createState() => _ScaffoldWidgetState();
-}
-
-class _ScaffoldWidgetState extends State<ScaffoldWidget> {
-  int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    MapPage(),
-    SecondPage(),
-    NotiAndNews(),
-  ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
+class ScaffoldWidget extends StatelessWidget {
+  final Widget title;
+  final Widget child;
+  ScaffoldWidget({
+    required this.child,
+    required this.title,
+  });
+  var scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(154, 39, 32, 1),
-        leading: Center(child: Text("Leading")),
-        title: const Text('AppBar Demo'),
-        actions: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Icon(
-              Icons.notifications,
-              size: 35,
-            ),
-          )
-        ],
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+        leading: Center(
+          child: IconButton(
+            icon: Icon(Icons.menu, size: 45),
+            onPressed: () {
+              scaffoldKey.currentState?.openDrawer();
+            },
+          ),
+        ),
+        title: title
       ),
-      body: _widgetOptions.elementAt(_selectedIndex),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'แผนที่เรือ',
-            backgroundColor: Colors.red,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'ข้อมูลเรือ',
-            backgroundColor: Colors.green,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'แจ้งเตือน',
-            backgroundColor: Colors.purple,
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
-        onTap: _onItemTapped,
-      ),
+      // drawer: Drawer(
+      //   // Add a ListView to the drawer. This ensures the user can scroll
+      //   // through the options in the drawer if there isn't enough vertical
+      //   // space to fit everything.
+      //   child: Container(
+      //     decoration: BoxDecoration(
+      //       borderRadius: new BorderRadius.only(
+      //         topRight: const Radius.circular(40.0),
+      //       ),
+      //     ),
+      //     child: ListView(
+      //       // Important: Remove any padding from the ListView.
+      //       padding: EdgeInsets.zero,
+      //       children: [
+      //         const DrawerHeader(
+      //           decoration: BoxDecoration(
+      //             image: DecorationImage(
+      //               image: AssetImage('assets/images/bg4.jpg'),
+      //               fit: BoxFit.cover,
+      //             ),
+      //             color: Colors.blue,
+      //           ),
+      //           child: Text('Drawer Header'),
+      //         ),
+      //         ListTile(
+      //           title: const Text('แผนที่'),
+      //           onTap: () {
+      //             Navigator.pushNamed(context, Constants.MAP_ROUTE);
+      //           },
+      //         ),
+      //         ListTile(
+      //           title: const Text('ข้อมูลเรือ'),
+      //           onTap: () {
+      //             Navigator.pushNamed(context, Constants.SECOND_ROUTE);
+      //           },
+      //         ),
+      //         ListTile(
+      //           title: const Text('แจ้งเตือน'),
+      //           onTap: () {
+      //             Navigator.pushNamed(context, Constants.NOTIANDNEWS_ROUTE);
+      //           },
+      //         ),
+      //         ListTile(
+      //           title: const Text('ข้อมูลผู้ใช้'),
+      //           onTap: () {
+      //             Navigator.pushNamed(context, Constants.USER_ROUTE);
+      //           },
+      //         ),
+      //       ],
+      //     ),
+      //   ),
+      // ),
+      extendBodyBehindAppBar: true,
+      body: child,
     );
   }
 }

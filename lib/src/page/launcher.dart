@@ -15,7 +15,7 @@ class _LauncherPageState extends State<LauncherPage> {
         const MapPage(),
         const NotiAndNews(),
         const SecondPage(),
-        const SettingsPage(),
+        const UserPage(),
     ];
 
  final List<BottomNavigationBarItem> _menuBar
