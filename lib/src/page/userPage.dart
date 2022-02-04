@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_project_template/src/component/contact.dart';
 import 'package:flutter_project_template/src/component/documents.dart';
 import 'package:flutter_project_template/src/utils/index.dart';
+import 'package:flutter_project_template/src/component/news.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class UserPage extends StatefulWidget {
@@ -29,7 +30,7 @@ class _UserPageState extends State<UserPage> {
                   margin: EdgeInsets.symmetric(vertical: 50, horizontal: 15),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
-                    color: AppTheme.light.primaryColor,
+                    color: Color.fromRGBO(240	,39	,70	, 1),
                     boxShadow: [
                       BoxShadow(
                         color: AppTheme.light.shadowColor,
@@ -48,7 +49,7 @@ class _UserPageState extends State<UserPage> {
                   child: IconButton(
                     icon: FaIcon(
                       FontAwesomeIcons.cog,
-                      color: Color.fromRGBO(255, 255, 255, 0.5),
+                      color: Color.fromRGBO(255, 255, 255, 1),
                       size: 25,
                     ),
                     onPressed: () {},
@@ -108,7 +109,7 @@ class _UserPageState extends State<UserPage> {
                     bottomLeft: Radius.circular(40),
                     topLeft: Radius.circular(40),
                   ),
-                  color: AppTheme.light.primaryColor,
+                  color: Color.fromRGBO(240	,39	,70	, 1),
                   boxShadow: [
                     BoxShadow(
                       color: AppTheme.light.shadowColor,
@@ -133,7 +134,7 @@ class _UserPageState extends State<UserPage> {
                             child: Text(
                               "20",
                               style: TextStyle(
-                                  color: Color.fromRGBO(210, 78, 78, 1),
+                                  color: Color.fromRGBO(255, 255, 255, 1),
                                   fontSize: 24,
                                   fontWeight: FontWeight.w700),
                             ),
@@ -145,7 +146,7 @@ class _UserPageState extends State<UserPage> {
                             child: Text(
                               "20",
                               style: TextStyle(
-                                  color: Color.fromRGBO(210, 78, 78, 1),
+                                  color: Color.fromRGBO(255, 255, 255, 1),
                                   fontSize: 24,
                                   fontWeight: FontWeight.w700),
                             ),
@@ -166,7 +167,7 @@ class _UserPageState extends State<UserPage> {
                             child: Text(
                               "SHIP",
                               style: TextStyle(
-                                  color: Color.fromRGBO(210, 70, 70, 1),
+                                  color: Color.fromRGBO(255, 255, 255, 1),
                                   fontSize: 18,
                                   fontWeight: FontWeight.w700),
                             ),
@@ -179,7 +180,7 @@ class _UserPageState extends State<UserPage> {
                             child: Text(
                               "PAYMENTS",
                               style: TextStyle(
-                                  color: Color.fromRGBO(210, 70, 70, 1),
+                                  color: Color.fromRGBO(255, 255, 255, 1),
                                   fontSize: 18,
                                   fontWeight: FontWeight.w700),
                             ),
@@ -191,14 +192,17 @@ class _UserPageState extends State<UserPage> {
                 ),
               ),
             ),
+            SizedBox(height: 10),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               color: Colors.white,
               width: double.infinity,
               height: 500,
               child: DefaultTabController(
+
                 length: 3,
                 child: ContainedTabBarView(
+
                   tabBarProperties: TabBarProperties(
                     indicator: ContainerTabIndicator(
                       color: Color.fromRGBO(166, 210, 204, 1),
@@ -206,6 +210,7 @@ class _UserPageState extends State<UserPage> {
                       height: 4,
                       padding: const EdgeInsets.only(top: 15),
                     ),
+                 
                     indicatorColor: Colors.white,
                     labelColor: Color.fromRGBO(166, 210, 204, 1),
                     unselectedLabelColor: Color.fromRGBO(203, 202, 205, 1),
@@ -216,7 +221,7 @@ class _UserPageState extends State<UserPage> {
                     Text('Documents'),
                   ],
                   views: [
-                    Container(color: Colors.red),
+                    NewsComponent(),
                     ContactComponent(),
                     DocumentsComponent()
                   ],

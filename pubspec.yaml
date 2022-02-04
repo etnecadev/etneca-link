@@ -36,6 +36,7 @@ dependencies:
   adaptive_theme: ^2.3.0
   expandable: ^5.0.1
   url_launcher: ^6.0.10
+  flutter_staggered_animations: ^1.0.0
 
 dev_dependencies:
   flutter_test:
