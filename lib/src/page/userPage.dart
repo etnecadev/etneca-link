@@ -5,14 +5,14 @@ import 'package:flutter_project_template/src/component/documents.dart';
 import 'package:flutter_project_template/src/component/news.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class SettingsPage extends StatefulWidget {
-  static const routeName = '/settings';
-  const SettingsPage({Key? key}) : super(key: key);
+class UserPage extends StatefulWidget {
+  static const routeName = '/user';
+  const UserPage({Key? key}) : super(key: key);
   @override
-  _SettingsPageState createState() => _SettingsPageState();
+  _UserPageState createState() => _UserPageState();
 }
 
-class _SettingsPageState extends State<SettingsPage> {
+class _UserPageState extends State<UserPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

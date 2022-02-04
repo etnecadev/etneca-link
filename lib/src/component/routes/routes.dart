@@ -8,6 +8,6 @@ var routes = {
   LauncherPage.routeName: (context) => LauncherPage(),
    MapPage.routeName:  (context) => MapPage(),
   SecondPage.routeName: (context) => SecondPage(),
-  SettingsPage.routeName: (context) => SettingsPage(),
+  UserPage.routeName: (context) => UserPage(),
   NotiAndNews.routeName: (context) => NotiAndNews(),
 };
