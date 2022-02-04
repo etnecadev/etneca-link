@@ -2,6 +2,7 @@ import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_project_template/src/component/contact.dart';
 import 'package:flutter_project_template/src/component/documents.dart';
+import 'package:flutter_project_template/src/component/news.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -191,14 +192,17 @@ class _SettingsPageState extends State<SettingsPage> {
                 ),
               ),
             ),
+            SizedBox(height: 10),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               color: Colors.white,
               width: double.infinity,
               height: 500,
               child: DefaultTabController(
+
                 length: 3,
                 child: ContainedTabBarView(
+
                   tabBarProperties: TabBarProperties(
                     indicator: ContainerTabIndicator(
                       color: Color.fromRGBO(166, 210, 204, 1),
@@ -206,6 +210,7 @@ class _SettingsPageState extends State<SettingsPage> {
                       height: 4,
                       padding: const EdgeInsets.only(top: 15),
                     ),
+                 
                     indicatorColor: Colors.white,
                     labelColor: Color.fromRGBO(166, 210, 204, 1),
                     unselectedLabelColor: Color.fromRGBO(203, 202, 205, 1),
@@ -216,7 +221,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     Text('Documents'),
                   ],
                   views: [
-                    Container(color: Colors.red),
+                    NewsComponent(),
                     ContactComponent(),
                     DocumentsComponent()
                   ],
