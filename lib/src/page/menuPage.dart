@@ -1,5 +1,6 @@
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_project_template/src/page/index.dart';
 import 'package:flutter_project_template/src/utils/index.dart';
 
 class MenuPage extends StatelessWidget {
@@ -62,34 +63,60 @@ class MenuPage extends StatelessWidget {
               padding: EdgeInsets.all(20),
               child: Column(
                 children: [
-                  Expanded(flex: 1,
-                      child: Container(
-                          margin: EdgeInsets.all(8),
-                          color: Colors.red,
-                          width: double.infinity,
-                          )),
                   Expanded(
-                    flex: 2,
+                      flex: 1,
+                      child: _submenu(context, "assets/images/bgmap.png",
+                          Icons.map, "Map", "/map")),
+                  Expanded(
+                      flex: 2,
                       child: Row(
-                    children: [
-                      Expanded(
-                        child: Column(
-                          children: [
-                            Expanded(flex: 3, child: _submenu()),
-                            Expanded(flex: 2, child: _submenu())
-                          ],
-                        ),
-                      ),
-                      Expanded(
-                        child: Column(
-                          children: [
-                            Expanded(flex: 2, child: _submenu()),
-                            Expanded(flex: 3, child: _submenu())
-                          ],
-                        ),
-                      )
-                    ],
-                  )),
+                        children: [
+                          Expanded(
+                            child: Column(
+                              children: [
+                                Expanded(
+                                    flex: 5,
+                                    child: _submenu(
+                                        context,
+                                        "assets/images/bgmap.png",
+                                        Icons.directions_boat,
+                                        "Ship",
+                                        "/map")),
+                                Expanded(
+                                    flex: 4,
+                                    child: _submenu(
+                                        context,
+                                        "assets/images/bgmap.png",
+                                        Icons.event_note_rounded,
+                                        "News",
+                                        "/map"))
+                              ],
+                            ),
+                          ),
+                          Expanded(
+                            child: Column(
+                              children: [
+                                Expanded(
+                                    flex: 4,
+                                    child: _submenu(
+                                        context,
+                                        "assets/images/bgmap.png",
+                                        Icons.map,
+                                        "package",
+                                        "/map")),
+                                Expanded(
+                                    flex: 5,
+                                    child: _submenu(
+                                        context,
+                                        "assets/images/bgmap.png",
+                                        Icons.account_circle_rounded,
+                                        "User",
+                                        "/user"))
+                              ],
+                            ),
+                          )
+                        ],
+                      )),
                 ],
               ),
             ),
@@ -102,10 +129,38 @@ class MenuPage extends StatelessWidget {
   }
 }
 
-_submenu() {
-  return Container(
+_submenu(context, image, icon, title, route) {
+  return GestureDetector(
+    onTap: () {
+      Navigator.pushNamed(context, route);
+    },
+    child: Container(
+      padding: EdgeInsets.all(15),
       margin: EdgeInsets.all(8),
-      color: Colors.red,
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage(image),
+              fit: BoxFit.cover,
+              colorFilter: ColorFilter.mode(
+                  Colors.red.withOpacity(0.2), BlendMode.dstATop)),
+          borderRadius: BorderRadius.circular(30),
+          color: AppTheme.light.primaryColor),
       width: double.infinity,
-      height: double.infinity);
+      height: double.infinity,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(icon, size: 70, color: Colors.white),
+          Container(
+            margin: EdgeInsets.only(left: 5, bottom: 5),
+            child: Text(
+              title,
+              style: TextStyle(fontSize: 25, color: Colors.white),
+            ),
+          )
+        ],
+      ),
+    ),
+  );
 }

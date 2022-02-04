@@ -23,7 +23,7 @@ class AppTheme {
   static const Color _iconColorWhite = Colors.white;
 
   //  main color
-  static const Color _primaryColor = Color.fromRGBO(250, 160, 160, 1);
+  static const Color _primaryColor = Color.fromRGBO(240	,39	,70	, 1);
   static const Color _accentColor = Color.fromRGBO(230, 130, 131, 1);
   static const Color _shadeColor = Color(0xFF454F59);
   static const Color _shadowColor = Color.fromRGBO(210, 100, 102, 0.5);
