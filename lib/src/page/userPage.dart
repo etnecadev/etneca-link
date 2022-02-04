@@ -29,7 +29,7 @@ class _UserPageState extends State<UserPage> {
                   margin: EdgeInsets.symmetric(vertical: 50, horizontal: 15),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
-                    color: Color.fromRGBO(250, 160, 160, 1),
+                    color: Color.fromRGBO(240	,39	,70	, 1),
                     boxShadow: [
                       BoxShadow(
                         color:
@@ -49,7 +49,7 @@ class _UserPageState extends State<UserPage> {
                   child: IconButton(
                     icon: FaIcon(
                       FontAwesomeIcons.cog,
-                      color: Color.fromRGBO(255, 255, 255, 0.5),
+                      color: Color.fromRGBO(255, 255, 255, 1),
                       size: 25,
                     ),
                     onPressed: () {},
@@ -109,7 +109,7 @@ class _UserPageState extends State<UserPage> {
                     bottomLeft: Radius.circular(40),
                     topLeft: Radius.circular(40),
                   ),
-                  color: Color.fromRGBO(250, 160, 160, 1),
+                  color: Color.fromRGBO(240	,39	,70	, 1),
                   boxShadow: [
                     BoxShadow(
                       color: Color.fromRGBO(210, 100, 102, 1).withOpacity(0.5),
@@ -134,7 +134,7 @@ class _UserPageState extends State<UserPage> {
                             child: Text(
                               "20",
                               style: TextStyle(
-                                  color: Color.fromRGBO(210, 78, 78, 1),
+                                  color: Color.fromRGBO(255, 255, 255, 1),
                                   fontSize: 24,
                                   fontWeight: FontWeight.w700),
                             ),
@@ -146,7 +146,7 @@ class _UserPageState extends State<UserPage> {
                             child: Text(
                               "20",
                               style: TextStyle(
-                                  color: Color.fromRGBO(210, 78, 78, 1),
+                                  color: Color.fromRGBO(255, 255, 255, 1),
                                   fontSize: 24,
                                   fontWeight: FontWeight.w700),
                             ),
@@ -167,7 +167,7 @@ class _UserPageState extends State<UserPage> {
                             child: Text(
                               "SHIP",
                               style: TextStyle(
-                                  color: Color.fromRGBO(210, 70, 70, 1),
+                                  color: Color.fromRGBO(255, 255, 255, 1),
                                   fontSize: 18,
                                   fontWeight: FontWeight.w700),
                             ),
@@ -180,7 +180,7 @@ class _UserPageState extends State<UserPage> {
                             child: Text(
                               "PAYMENTS",
                               style: TextStyle(
-                                  color: Color.fromRGBO(210, 70, 70, 1),
+                                  color: Color.fromRGBO(255, 255, 255, 1),
                                   fontSize: 18,
                                   fontWeight: FontWeight.w700),
                             ),
