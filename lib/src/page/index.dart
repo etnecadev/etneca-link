@@ -4,4 +4,5 @@ export 'notiAndNews.dart';
 export 'userPage.dart';
 export 'launcher.dart';
 export 'userPage.dart';
+export 'menuPage.dart';
 

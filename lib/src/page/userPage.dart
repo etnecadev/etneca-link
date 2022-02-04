@@ -2,6 +2,7 @@ import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_project_template/src/component/contact.dart';
 import 'package:flutter_project_template/src/component/documents.dart';
+import 'package:flutter_project_template/src/utils/index.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class UserPage extends StatefulWidget {
@@ -28,11 +29,10 @@ class _UserPageState extends State<UserPage> {
                   margin: EdgeInsets.symmetric(vertical: 50, horizontal: 15),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
-                    color: Color.fromRGBO(250, 160, 160, 1),
+                    color: AppTheme.light.primaryColor,
                     boxShadow: [
                       BoxShadow(
-                        color:
-                            Color.fromRGBO(210, 100, 102, 1).withOpacity(0.5),
+                        color: AppTheme.light.shadowColor,
                         spreadRadius: 2,
                         blurRadius: 6,
                         offset: Offset(0, 1), // changes position of shadow
@@ -59,7 +59,7 @@ class _UserPageState extends State<UserPage> {
                   child: Hero(
                     tag: 'User Avatar Image',
                     child: CircleAvatar(
-                        backgroundColor: Color.fromRGBO(210, 100, 102, 0.5),
+                        backgroundColor: AppTheme.light.accentColor,
                         radius: 100.0,
                         child: ClipOval(
                           child: CircleAvatar(
@@ -108,10 +108,10 @@ class _UserPageState extends State<UserPage> {
                     bottomLeft: Radius.circular(40),
                     topLeft: Radius.circular(40),
                   ),
-                  color: Color.fromRGBO(250, 160, 160, 1),
+                  color: AppTheme.light.primaryColor,
                   boxShadow: [
                     BoxShadow(
-                      color: Color.fromRGBO(210, 100, 102, 1).withOpacity(0.5),
+                      color: AppTheme.light.shadowColor,
                       spreadRadius: 2,
                       blurRadius: 6,
                       offset: Offset(0, 1), // changes position of shadow
