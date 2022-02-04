@@ -1,5 +1,7 @@
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_project_template/src/component/contact.dart';
+import 'package:flutter_project_template/src/component/documents.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -215,8 +217,8 @@ class _SettingsPageState extends State<SettingsPage> {
                   ],
                   views: [
                     Container(color: Colors.red),
-                    Container(color: Colors.green),
-                    Container(color: Colors.blue),
+                    ContactComponent(),
+                    DocumentsComponent()
                   ],
                   onChange: (index) => print(index),
                 ),
