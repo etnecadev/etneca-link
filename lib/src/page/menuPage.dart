@@ -1,14 +1,17 @@
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template/src/page/index.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_project_template/src/component/responsive/responsive.dart';
 import 'package:flutter_project_template/src/utils/index.dart';
 
 class MenuPage extends StatelessWidget {
   static const routeName = '/menu';
   const MenuPage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+        DeviceOrientation.portraitUp,
+      ]);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppTheme.light.primaryColor,
@@ -20,10 +23,6 @@ class MenuPage extends StatelessWidget {
           style: TextStyle(color: Colors.white),
         )),
         actions: [
-          IconButton(
-            icon: Icon(Icons.notifications, color: Colors.white),
-            onPressed: () {},
-          ),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 8),
             width: 45,
@@ -55,7 +54,7 @@ class MenuPage extends StatelessWidget {
           ),
           tabs: [
             Text('menu'),
-            Text('Contact us'),
+            Text('Notification'),
           ],
           views: [
             Container(
@@ -63,59 +62,63 @@ class MenuPage extends StatelessWidget {
               padding: EdgeInsets.all(20),
               child: Column(
                 children: [
-                  Expanded(
+                  Flexible(
                       flex: 1,
-                      child: _submenu(context, "assets/images/bgmap.png",
-                          Icons.map, "Map", "/map")),
-                  Expanded(
+                      child: Container(
+                          child: _submenu(context, "assets/images/bgmap.png",
+                              Icons.map, "Map", "/map")
+                              )),
+                  Flexible(
                       flex: 2,
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: Column(
-                              children: [
-                                Expanded(
-                                    flex: 5,
-                                    child: _submenu(
-                                        context,
-                                        "assets/images/bgmap.png",
-                                        Icons.directions_boat,
-                                        "Ship",
-                                        "/map")),
-                                Expanded(
-                                    flex: 4,
-                                    child: _submenu(
-                                        context,
-                                        "assets/images/bgmap.png",
-                                        Icons.event_note_rounded,
-                                        "News",
-                                        "/map"))
-                              ],
+                      child: Container(
+                        child: Row(
+                          children: [
+                            Flexible(
+                              child: Column(
+                                children: [
+                                  Flexible(
+                                      flex: 5,
+                                      child: _submenu(
+                                          context,
+                                          "assets/images/bgmap.png",
+                                          Icons.directions_boat,
+                                          "Ship",
+                                          "/map")),
+                                  Flexible(
+                                      flex: 4,
+                                      child: _submenu(
+                                          context,
+                                          "assets/images/bgmap.png",
+                                          Icons.event_note_rounded,
+                                          "News",
+                                          "/map"))
+                                ],
+                              ),
                             ),
-                          ),
-                          Expanded(
-                            child: Column(
-                              children: [
-                                Expanded(
-                                    flex: 4,
-                                    child: _submenu(
-                                        context,
-                                        "assets/images/bgmap.png",
-                                        Icons.map,
-                                        "package",
-                                        "/map")),
-                                Expanded(
-                                    flex: 5,
-                                    child: _submenu(
-                                        context,
-                                        "assets/images/bgmap.png",
-                                        Icons.account_circle_rounded,
-                                        "User",
-                                        "/user"))
-                              ],
-                            ),
-                          )
-                        ],
+                            Flexible(
+                              child: Column(
+                                children: [
+                                  Flexible(
+                                      flex: 4,
+                                      child: _submenu(
+                                          context,
+                                          "assets/images/bgmap.png",
+                                          Icons.map,
+                                          "package",
+                                          "/map")),
+                                  Flexible(
+                                      flex: 5,
+                                      child: _submenu(
+                                          context,
+                                          "assets/images/bgmap.png",
+                                          Icons.account_circle_rounded,
+                                          "User",
+                                          "/user"))
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
                       )),
                 ],
               ),
