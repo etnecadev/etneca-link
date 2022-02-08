@@ -13,6 +13,7 @@ class AppTheme {
   //text color
   static const Color _textYellowColor = Color(0xFFFFC200);
   static const Color _textWhiteColor = Color(0xFFFFFFFF);
+  static const Color _textRedColor = Color.fromRGBO(210, 78, 78, 1);
 
   //area color
   static const Color _areaGreyColor = Color(0xFF7D848B);
@@ -22,8 +23,10 @@ class AppTheme {
   static const Color _iconColorWhite = Colors.white;
 
   //  main color
-  static const Color _primaryColor = Color(0xFF3A424A);
+  static const Color _primaryColor = Color.fromRGBO(240	,39	,70	, 1);
+  static const Color _accentColor = Color.fromRGBO(230, 130, 131, 1);
   static const Color _shadeColor = Color(0xFF454F59);
+  static const Color _shadowColor = Color.fromRGBO(210, 100, 102, 0.5);
   static const Color _secondColor = Color(0xFFD6C960);
   static const Color _whiteColor = Color(0xFFF5F5F5);
   static const Color _blackColor = Color(0xFF060606);
@@ -32,10 +35,13 @@ class AppTheme {
 
   static final ThemeData light = ThemeData(
     brightness: Brightness.light,
+    primaryColor: _primaryColor,
+    accentColor: _accentColor,
+    shadowColor: _shadowColor,
     primarySwatch: Colors.pink,
     cardColor: _shadeColor,
   );
-    static final ThemeData dark = ThemeData(
+  static final ThemeData dark = ThemeData(
     brightness: Brightness.dark,
     primarySwatch: Colors.pink,
     cardColor: _shadeColor,

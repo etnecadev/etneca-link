@@ -1,6 +1,5 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template/src/page/launcher.dart';
 import 'package:flutter_project_template/src/utils/index.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -32,7 +31,7 @@ class MyApp extends StatelessWidget {
             ],
             background: Container(color: Color(0xFFF5F5F5))),
         debugShowCheckedModeBanner: false,
-        initialRoute: "/user",
+        initialRoute: "/menu",
         routes: routes));
   }
 }
