@@ -9,8 +9,8 @@ class MenuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([
-        DeviceOrientation.portraitUp,
-      ]);
+      DeviceOrientation.portraitUp,
+    ]);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppTheme.light.primaryColor,
@@ -23,109 +23,101 @@ class MenuPage extends StatelessWidget {
         )),
         actions: [
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 8),
-            width: 45,
-            height: 45,
             child: CircleAvatar(
-                backgroundColor: AppTheme.light.accentColor,
-                radius: 100.0,
+                backgroundColor: Color.fromRGBO(210, 100, 102, 0.5),
+                radius: 50.0,
                 child: ClipOval(
                   child: CircleAvatar(
                     backgroundImage: AssetImage('assets/images/profile.jpg'),
-                    radius: 92.0,
+                    radius: 25.0,
                   ),
                 )),
           ),
         ],
       ),
-      body: Container(
-        color: AppTheme.light.primaryColor,
-        child: ContainedTabBarView(
-          tabBarProperties: TabBarProperties(
-            indicator: ContainerTabIndicator(
-              color: Colors.white,
-              widthFraction: 0.8,
-              height: 4,
-              padding: const EdgeInsets.only(top: 25),
-            ),
-            labelColor: Colors.white,
-            unselectedLabelColor: Colors.white,
+      body: ContainedTabBarView(
+        tabBarProperties: TabBarProperties(
+          indicator: ContainerTabIndicator(
+            color: AppTheme.light.primaryColor,
+            widthFraction: 0.8,
+            height: 4,
+            padding: const EdgeInsets.only(top: 25),
           ),
-          tabs: [
-            Text('menu'),
-            Text('Notification'),
-          ],
-          views: [
-            Container(
-              color: Colors.grey[300],
-              padding: EdgeInsets.all(20),
-              child: Column(
-                children: [
-                  Flexible(
-                      flex: 1,
-                      child: Container(
-                          child: _submenu(context, "assets/images/bgmap.png",
-                              Icons.map, "Map", "/map")
-                              )),
-                  Flexible(
-                      flex: 2,
-                      child: Container(
-                        child: Row(
-                          children: [
-                            Flexible(
-                              child: Column(
-                                children: [
-                                  Flexible(
-                                      flex: 5,
-                                      child: _submenu(
-                                          context,
-                                          "assets/images/bgmap.png",
-                                          Icons.directions_boat,
-                                          "Ship",
-                                          "/map")),
-                                  Flexible(
-                                      flex: 4,
-                                      child: _submenu(
-                                          context,
-                                          "assets/images/bgmap.png",
-                                          Icons.event_note_rounded,
-                                          "News",
-                                          "/map"))
-                                ],
-                              ),
-                            ),
-                            Flexible(
-                              child: Column(
-                                children: [
-                                  Flexible(
-                                      flex: 4,
-                                      child: _submenu(
-                                          context,
-                                          "assets/images/bgmap.png",
-                                          Icons.map,
-                                          "package",
-                                          "/map")),
-                                  Flexible(
-                                      flex: 5,
-                                      child: _submenu(
-                                          context,
-                                          "assets/images/bgmap.png",
-                                          Icons.account_circle_rounded,
-                                          "User",
-                                          "/user"))
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      )),
-                ],
-              ),
-            ),
-            Container(color: Colors.blue),
-          ],
-          onChange: (index) => print(index),
+          labelColor: Colors.red[900],
+          unselectedLabelColor: AppTheme.light.primaryColor,
         ),
+        tabs: [
+          Text('menu'),
+          Text('Notification'),
+        ],
+        views: [
+          Container(
+            padding: EdgeInsets.all(20),
+            child: Column(
+              children: [
+                Flexible(
+                    flex: 1,
+                    child: Container(
+                        child: _submenu(context, "assets/images/mapbg.jpg",
+                            Icons.map, "Map", "/map"))),
+                Flexible(
+                    flex: 2,
+                    child: Container(
+                      child: Row(
+                        children: [
+                          Flexible(
+                            child: Column(
+                              children: [
+                                Flexible(
+                                    flex: 5,
+                                    child: _submenu(
+                                        context,
+                                        "assets/images/boat.jpg",
+                                        Icons.directions_boat,
+                                        "Ship",
+                                        "/ship")),
+                                Flexible(
+                                    flex: 4,
+                                    child: _submenu(
+                                        context,
+                                        "assets/images/news1.png",
+                                        Icons.event_note_rounded,
+                                        "News",
+                                        "/map"))
+                              ],
+                            ),
+                          ),
+                          Flexible(
+                            child: Column(
+                              children: [
+                                Flexible(
+                                    flex: 4,
+                                    child: _submenu(
+                                        context,
+                                        "assets/images/bgmap.png",
+                                        Icons.map,
+                                        "package",
+                                        "/map")),
+                                Flexible(
+                                    flex: 5,
+                                    child: _submenu(
+                                        context,
+                                        "assets/images/profile.jpg",
+                                        Icons.account_circle_rounded,
+                                        "User",
+                                        "/user"))
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    )),
+              ],
+            ),
+          ),
+          Container(color: Colors.blue),
+        ],
+        onChange: (index) => print(index),
       ),
     );
   }
@@ -140,20 +132,19 @@ _submenu(context, image, icon, title, route) {
       padding: EdgeInsets.all(15),
       margin: EdgeInsets.all(8),
       decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage(image),
-              fit: BoxFit.cover,
-              colorFilter: ColorFilter.mode(
-                  Colors.red.withOpacity(0.2), BlendMode.dstATop)),
-          borderRadius: BorderRadius.circular(30),
-          color: AppTheme.light.primaryColor),
+        image: DecorationImage(
+          image: AssetImage(image),
+          fit: BoxFit.cover,
+        ),
+        borderRadius: BorderRadius.circular(30),
+      ),
       width: double.infinity,
       height: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(icon, size: 70, color: Colors.white),
+          Icon(icon, size: 40, color: Colors.white),
           Container(
             margin: EdgeInsets.only(left: 5, bottom: 5),
             child: Text(
