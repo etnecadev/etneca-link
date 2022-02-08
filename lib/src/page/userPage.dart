@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_project_template/src/component/contact.dart';
 import 'package:flutter_project_template/src/component/documents.dart';
 import 'package:flutter_project_template/src/component/news.dart';
+import 'package:flutter_project_template/src/page/settings.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class UserPage extends StatefulWidget {
@@ -29,7 +30,7 @@ class _UserPageState extends State<UserPage> {
                   margin: EdgeInsets.symmetric(vertical: 50, horizontal: 15),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
-                    color: Color.fromRGBO(240	,39	,70	, 1),
+                    color: Color.fromRGBO(240, 39, 70, 1),
                     boxShadow: [
                       BoxShadow(
                         color:
@@ -52,7 +53,12 @@ class _UserPageState extends State<UserPage> {
                       color: Color.fromRGBO(255, 255, 255, 1),
                       size: 25,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SettingsPage()));
+                    },
                   ),
                 ),
                 Positioned(
@@ -109,7 +115,7 @@ class _UserPageState extends State<UserPage> {
                     bottomLeft: Radius.circular(40),
                     topLeft: Radius.circular(40),
                   ),
-                  color: Color.fromRGBO(240	,39	,70	, 1),
+                  color: Color.fromRGBO(240, 39, 70, 1),
                   boxShadow: [
                     BoxShadow(
                       color: Color.fromRGBO(210, 100, 102, 1).withOpacity(0.5),
@@ -199,10 +205,8 @@ class _UserPageState extends State<UserPage> {
               width: double.infinity,
               height: 500,
               child: DefaultTabController(
-
                 length: 3,
                 child: ContainedTabBarView(
-
                   tabBarProperties: TabBarProperties(
                     indicator: ContainerTabIndicator(
                       color: Color.fromRGBO(166, 210, 204, 1),
@@ -210,7 +214,6 @@ class _UserPageState extends State<UserPage> {
                       height: 4,
                       padding: const EdgeInsets.only(top: 15),
                     ),
-                 
                     indicatorColor: Colors.white,
                     labelColor: Color.fromRGBO(166, 210, 204, 1),
                     unselectedLabelColor: Color.fromRGBO(203, 202, 205, 1),
