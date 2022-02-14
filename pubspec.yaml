@@ -38,6 +38,7 @@ dependencies:
   url_launcher: ^6.0.10
   flutter_staggered_animations: ^1.0.0
   flutter_switch: ^0.3.2
+  toggle_switch: ^1.4.0
 
 dev_dependencies:
   flutter_test:
