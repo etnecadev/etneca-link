@@ -9,10 +9,10 @@ class SecondPage extends StatefulWidget {
   _SecondPageState createState() => _SecondPageState();
 }
 
-_Card(color) {
+_Card(context, color) {
   return GestureDetector(
     onTap: () {
-      print("hi");
+      Navigator.pushNamed(context, "/shipdatapage");
     },
     child: Container(
       margin: EdgeInsets.only(top: 20),
@@ -22,10 +22,10 @@ _Card(color) {
         borderRadius: BorderRadius.all(Radius.circular(10)),
         boxShadow: [
           BoxShadow(
-            color: AppTheme.light.shadowColor,
-            spreadRadius: 0,
-            blurRadius: 6,
-            offset: Offset(0, 1), // changes position of shadow
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 5,
+            blurRadius: 7,
+            offset: Offset(0, 3), // changes position of shadow
           ),
         ],
       ),
@@ -107,7 +107,16 @@ class _SecondPageState extends State<SecondPage> {
             ),
             Flexible(
               child: ListView(
-                children: <Widget>[_Card(Colors.blue), _Card(Colors.red)],
+                children: <Widget>[
+                  _Card(
+                    context,
+                    Color.fromRGBO(166, 210, 204, 1),
+                  ),
+                  _Card(
+                    context,
+                    Color.fromRGBO(237, 116, 108, 1),
+                  )
+                ],
               ),
             ),
           ],

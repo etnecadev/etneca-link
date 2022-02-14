@@ -9,5 +9,6 @@ var routes = {
   NotiAndNews.routeName: (context) => NotiAndNews(),
   MenuPage.routeName: (context) => MenuPage(),
   PackagesPage.routeName: (context) => PackagesPage(),
+  ShipDataPage.routeName: (context) => ShipDataPage(),
 
 };
