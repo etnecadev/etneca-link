@@ -24,7 +24,7 @@ class ScaffoldWidget extends StatelessWidget {
             },
           ),
         ),
-        title: title
+        title: title,
       ),
       // drawer: Drawer(
       //   // Add a ListView to the drawer. This ensures the user can scroll
