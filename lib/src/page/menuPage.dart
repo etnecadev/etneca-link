@@ -2,6 +2,7 @@ import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_project_template/src/utils/index.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'index.dart';
 
@@ -21,7 +22,7 @@ class MenuPage extends StatelessWidget {
         title: Center(
             child: Text(
           "ETNECA LINK",
-          style: TextStyle(color: Colors.white),
+          style: GoogleFonts.kanit(textStyle: TextStyle(color: Colors.white)),
         )),
         actions: [
           Container(
