@@ -1,4 +1,5 @@
 import 'package:flutter_project_template/src/page/index.dart';
+import 'package:flutter_project_template/src/page/notification.dart';
 import 'package:flutter_project_template/src/page/packages.dart';
 
 var routes = {
@@ -9,5 +10,5 @@ var routes = {
   NotiAndNews.routeName: (context) => NotiAndNews(),
   MenuPage.routeName: (context) => MenuPage(),
   PackagesPage.routeName: (context) => PackagesPage(),
-
+NotificationPage.routeName: (context) => NotificationPage(),
 };

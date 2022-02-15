@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
             ],
             background: Container(color: Color(0xFFF5F5F5))),
         debugShowCheckedModeBanner: false,
-        initialRoute: "/packages",
+        initialRoute: "/notification",
         routes: routes));
   }
 }
