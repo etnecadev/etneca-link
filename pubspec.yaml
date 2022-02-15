@@ -39,6 +39,7 @@ dependencies:
   flutter_staggered_animations: ^1.0.0
   flutter_switch: ^0.3.2
   toggle_switch: ^1.4.0
+  google_fonts: ^2.3.0
 
 dev_dependencies:
   flutter_test:
