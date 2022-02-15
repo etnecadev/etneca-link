@@ -135,10 +135,11 @@ _submenu(context, image, icon, title, route) {
       padding: EdgeInsets.all(15),
       margin: EdgeInsets.all(8),
       decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage(image),
-          fit: BoxFit.cover,
-        ),
+        color: AppTheme.light.primaryColor,
+        // image: DecorationImage(
+        //   image: AssetImage(image),
+        //   fit: BoxFit.cover,
+        // ),
         borderRadius: BorderRadius.circular(30),
       ),
       width: double.infinity,
