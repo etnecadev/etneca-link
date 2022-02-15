@@ -97,7 +97,7 @@ class MenuPage extends StatelessWidget {
                                         "assets/images/bgmap.png",
                                         Icons.map,
                                         "package",
-                                        "/map")),
+                                        "/packages")),
                                 Flexible(
                                     flex: 5,
                                     child: _submenu(

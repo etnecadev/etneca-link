@@ -11,4 +11,6 @@ var routes = {
   MenuPage.routeName: (context) => MenuPage(),
   PackagesPage.routeName: (context) => PackagesPage(),
 NotificationPage.routeName: (context) => NotificationPage(),
+  ShipDataPage.routeName: (context) => ShipDataPage(),
+
 };

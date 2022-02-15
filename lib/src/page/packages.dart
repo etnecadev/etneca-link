@@ -419,7 +419,7 @@ class PackagesPage extends StatelessWidget {
                         height: 90,
                         width: 90,
                         decoration: BoxDecoration(
-                          color: Color.fromRGBO(95	,152	,227	, 1),
+                          color: Color.fromRGBO(95, 152, 227, 1),
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(50),
                               bottomLeft: Radius.circular(0),
@@ -490,12 +490,12 @@ class PackagesPage extends StatelessWidget {
                       initialLabelIndex: 0,
                       minWidth: 85,
                       totalSwitches: 4,
-                      activeBgColor: [Color.fromRGBO(95	,152,	227	, 1)],
-                      borderColor: [Color.fromRGBO(95	,152,	227	,  1)],
+                      activeBgColor: [Color.fromRGBO(95, 152, 227, 1)],
+                      borderColor: [Color.fromRGBO(95, 152, 227, 1)],
                       borderWidth: 1.0,
                       fontSize: 14,
                       animate: false,
-                      dividerColor: Color.fromRGBO(95	,152,	227	,  1),
+                      dividerColor: Color.fromRGBO(95, 152, 227, 1),
                       inactiveBgColor: Colors.white,
                       labels: ['1 month', '3 month', '6 month', '12 month'],
                       onToggle: (index) {
@@ -506,7 +506,6 @@ class PackagesPage extends StatelessWidget {
                 ],
               ),
             ),
-
             SizedBox(
               height: 30,
             ),
@@ -540,7 +539,7 @@ class PackagesPage extends StatelessWidget {
                         height: 90,
                         width: 90,
                         decoration: BoxDecoration(
-                          color: Color.fromRGBO(241	,178,	138		, 1),
+                          color: Color.fromRGBO(241, 178, 138, 1),
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(50),
                               bottomLeft: Radius.circular(0),
@@ -611,12 +610,12 @@ class PackagesPage extends StatelessWidget {
                       initialLabelIndex: 0,
                       minWidth: 85,
                       totalSwitches: 4,
-                      activeBgColor: [Color.fromRGBO(241	,178,	138	, 1)],
-                      borderColor: [Color.fromRGBO(241	,178,	138		,  1)],
+                      activeBgColor: [Color.fromRGBO(241, 178, 138, 1)],
+                      borderColor: [Color.fromRGBO(241, 178, 138, 1)],
                       borderWidth: 1.0,
                       fontSize: 14,
                       animate: false,
-                      dividerColor: Color.fromRGBO(241	,178,	138		,  1),
+                      dividerColor: Color.fromRGBO(241, 178, 138, 1),
                       inactiveBgColor: Colors.white,
                       labels: ['1 month', '3 month', '6 month', '12 month'],
                       onToggle: (index) {
@@ -627,8 +626,6 @@ class PackagesPage extends StatelessWidget {
                 ],
               ),
             ),
-
-
             SizedBox(
               height: 30,
             ),
@@ -662,7 +659,7 @@ class PackagesPage extends StatelessWidget {
                         height: 90,
                         width: 90,
                         decoration: BoxDecoration(
-                          color: Color.fromRGBO(237	,116	,108				, 1),
+                          color: Color.fromRGBO(237, 116, 108, 1),
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(50),
                               bottomLeft: Radius.circular(0),
@@ -733,12 +730,12 @@ class PackagesPage extends StatelessWidget {
                       initialLabelIndex: 0,
                       minWidth: 85,
                       totalSwitches: 4,
-                      activeBgColor: [Color.fromRGBO(237	,116	,108			, 1)],
-                      borderColor: [Color.fromRGBO(237	,116	,108			,  1)],
+                      activeBgColor: [Color.fromRGBO(237, 116, 108, 1)],
+                      borderColor: [Color.fromRGBO(237, 116, 108, 1)],
                       borderWidth: 1.0,
                       fontSize: 14,
                       animate: false,
-                      dividerColor: Color.fromRGBO(237	,116	,108		,  1),
+                      dividerColor: Color.fromRGBO(237, 116, 108, 1),
                       inactiveBgColor: Colors.white,
                       labels: ['1 month', '3 month', '6 month', '12 month'],
                       onToggle: (index) {
