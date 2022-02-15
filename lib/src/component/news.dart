@@ -3,6 +3,7 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 class NewsComponent extends StatelessWidget {
+    static const routeName = '/news';
   @override
   Widget build(BuildContext context) {
     return AnimationLimiter(

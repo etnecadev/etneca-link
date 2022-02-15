@@ -80,15 +80,18 @@ class _SecondPageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        // backgroundColor: Colors.transparent,
-        // elevation: 0,
-        title: Center(
-            child: Text(
-          "Ship",
-          style: TextStyle(color: Colors.black),
-        )),
+      backgroundColor: Color.fromRGBO(255, 255, 255, 1),
+            appBar: AppBar(
+        backgroundColor: Color.fromRGBO(255, 255, 255, 1),
+        elevation: 0,
+        centerTitle: true,
+        title: Text(
+          'Ship',
+          style: TextStyle(
+              color: Color.fromRGBO(93, 90, 97, 1),
+              fontSize: 20,
+              fontWeight: FontWeight.w500),
+        ),
       ),
       body: Container(
         padding: EdgeInsets.all(18),

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_project_template/src/utils/index.dart';
 
+import 'index.dart';
+
 class MenuPage extends StatelessWidget {
   static const routeName = '/menu';
   const MenuPage({Key? key}) : super(key: key);
@@ -83,7 +85,7 @@ class MenuPage extends StatelessWidget {
                                         "assets/images/news1.png",
                                         Icons.event_note_rounded,
                                         "News",
-                                        "/map"))
+                                        "/news"))
                               ],
                             ),
                           ),
@@ -115,7 +117,7 @@ class MenuPage extends StatelessWidget {
               ],
             ),
           ),
-          Container(color: Colors.blue),
+          NotificationPage()
         ],
         onChange: (index) => print(index),
       ),

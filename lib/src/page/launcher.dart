@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_template/src/component/news.dart';
 import 'package:flutter_project_template/src/page/index.dart';
 
 
@@ -13,7 +14,7 @@ class _LauncherPageState extends State<LauncherPage> {
   int _selectedIndex = 0;
     final List<Widget> _pageWidget = <Widget>[
         const MapPage(),
-        const NotiAndNews(),
+        // const NewsComponent(),
         const SecondPage(),
         const UserPage(),
     ];
