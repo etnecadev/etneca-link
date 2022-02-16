@@ -143,7 +143,7 @@ class _UserPageState extends State<UserPage> {
                               style: GoogleFonts.kanit(textStyle:TextStyle(
                                   color: Color.fromRGBO(255, 255, 255, 1),
                                   fontSize: 24,
-                                  fontWeight: FontWeight.w700)),
+                                  fontWeight: FontWeight.w500)),
                             ),
                           ),
                         ),
@@ -155,7 +155,7 @@ class _UserPageState extends State<UserPage> {
                               style: GoogleFonts.kanit(textStyle:TextStyle(
                                   color: Color.fromRGBO(255, 255, 255, 1),
                                   fontSize: 24,
-                                  fontWeight: FontWeight.w700)),
+                                  fontWeight: FontWeight.w500)),
                             ),
                           ),
                         ),
@@ -176,7 +176,7 @@ class _UserPageState extends State<UserPage> {
                               style: GoogleFonts.kanit(textStyle:TextStyle(
                                   color: Color.fromRGBO(255, 255, 255, 1),
                                   fontSize: 18,
-                                  fontWeight: FontWeight.w700)),
+                                  fontWeight: FontWeight.w600)),
                             ),
                           ),
                         ),
@@ -189,7 +189,7 @@ class _UserPageState extends State<UserPage> {
                               style: GoogleFonts.kanit(textStyle:TextStyle(
                                   color: Color.fromRGBO(255, 255, 255, 1),
                                   fontSize: 18,
-                                  fontWeight: FontWeight.w700)),
+                                  fontWeight: FontWeight.w600)),
                             ),
                           ),
                         ),
@@ -220,9 +220,9 @@ class _UserPageState extends State<UserPage> {
                     unselectedLabelColor: Color.fromRGBO(203, 202, 205, 1),
                   ),
                   tabs: [
-                    Text('News',style: GoogleFonts.kanit()),
-                    Text('Contact',style: GoogleFonts.kanit()),
-                    Text('Documents',style: GoogleFonts.kanit()),
+                    Text('News',style: GoogleFonts.kanit(fontSize: 16)),
+                    Text('Contact',style: GoogleFonts.kanit(fontSize: 16)),
+                    Text('Documents',style: GoogleFonts.kanit(fontSize: 16)),
                   ],
                   views: [
                     NewsComponent(),
