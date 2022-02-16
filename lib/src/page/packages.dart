@@ -13,6 +13,15 @@ class PackagesPage extends StatelessWidget {
         backgroundColor: Color.fromRGBO(255, 255, 255, 1),
         elevation: 0,
         centerTitle: true,
+        leading: Center(
+          child: IconButton(
+            icon: Icon(Icons.arrow_back_ios_new, size: 30,color: Color.fromRGBO(93, 90, 97, 1),),
+            onPressed: () {
+              // scaffoldKey.currentState?.openDrawer();
+              Navigator.pop(context);
+            },
+          ),
+        ),
         title: Text(
           'Packages',
           style: GoogleFonts.kanit(textStyle:TextStyle(

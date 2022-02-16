@@ -46,6 +46,16 @@ class _UserPageState extends State<UserPage> {
                   height: 280,
                 ),
                 Positioned(
+                  left: 40,
+                  top: 70,
+                  child: IconButton(
+                    icon: Icon(Icons.arrow_back_ios_new, size: 30,color: Color.fromRGBO(255, 255, 255, 1),),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  ),
+                ),
+                Positioned(
                   right: 50,
                   top: 70,
                   child: IconButton(
