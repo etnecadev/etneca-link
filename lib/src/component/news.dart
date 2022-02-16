@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class NewsComponent extends StatelessWidget {
     static const routeName = '/news';
@@ -42,10 +43,10 @@ class NewsComponent extends StatelessWidget {
                                     softWrap: true,
                                     overflow: TextOverflow.fade,
                                     textAlign: TextAlign.justify,
-                                    style: TextStyle(
+                                    style: GoogleFonts.kanit(textStyle:TextStyle(
                                         color: Colors.white,
                                         fontSize: 17,
-                                        fontWeight: FontWeight.w800)),
+                                        fontWeight: FontWeight.w800))),
                               ),
                             ),
                             decoration: BoxDecoration(

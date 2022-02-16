@@ -6,6 +6,7 @@ import 'package:flutter_project_template/src/utils/index.dart';
 import 'package:flutter_project_template/src/component/news.dart';
 import 'package:flutter_project_template/src/page/settings.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class UserPage extends StatefulWidget {
   static const routeName = '/user';
@@ -83,27 +84,27 @@ class _UserPageState extends State<UserPage> {
                 padding: EdgeInsets.all(20),
                 child: Text(
                   "Dwight Schrute",
-                  style: TextStyle(
+                  style: GoogleFonts.kanit(textStyle:TextStyle(
                       color: Color.fromRGBO(93, 90, 97, 1),
                       fontSize: 25,
-                      fontWeight: FontWeight.w500),
+                      fontWeight: FontWeight.w500)),
                 )),
             Container(
                 child: Text(
               "general ship customers",
-              style: TextStyle(
+              style: GoogleFonts.kanit(textStyle:TextStyle(
                   color: Color.fromRGBO(93, 90, 97, 1),
                   fontSize: 18,
-                  fontWeight: FontWeight.w400),
+                  fontWeight: FontWeight.w400)),
             )),
             Container(
               padding: EdgeInsets.all(15),
               child: Text(
                 "Thailand",
-                style: TextStyle(
+                style: GoogleFonts.kanit(textStyle:TextStyle(
                     color: Color.fromRGBO(203, 202, 205, 1),
                     fontSize: 16,
-                    fontWeight: FontWeight.w400),
+                    fontWeight: FontWeight.w400)),
               ),
             ),
             Align(
@@ -139,10 +140,10 @@ class _UserPageState extends State<UserPage> {
                           child: Center(
                             child: Text(
                               "20",
-                              style: TextStyle(
+                              style: GoogleFonts.kanit(textStyle:TextStyle(
                                   color: Color.fromRGBO(255, 255, 255, 1),
                                   fontSize: 24,
-                                  fontWeight: FontWeight.w700),
+                                  fontWeight: FontWeight.w700)),
                             ),
                           ),
                         ),
@@ -151,10 +152,10 @@ class _UserPageState extends State<UserPage> {
                           child: Center(
                             child: Text(
                               "20",
-                              style: TextStyle(
+                              style: GoogleFonts.kanit(textStyle:TextStyle(
                                   color: Color.fromRGBO(255, 255, 255, 1),
                                   fontSize: 24,
-                                  fontWeight: FontWeight.w700),
+                                  fontWeight: FontWeight.w700)),
                             ),
                           ),
                         ),
@@ -172,10 +173,10 @@ class _UserPageState extends State<UserPage> {
                           child: Center(
                             child: Text(
                               "SHIP",
-                              style: TextStyle(
+                              style: GoogleFonts.kanit(textStyle:TextStyle(
                                   color: Color.fromRGBO(255, 255, 255, 1),
                                   fontSize: 18,
-                                  fontWeight: FontWeight.w700),
+                                  fontWeight: FontWeight.w700)),
                             ),
                           ),
                         ),
@@ -185,10 +186,10 @@ class _UserPageState extends State<UserPage> {
                           child: Center(
                             child: Text(
                               "PAYMENTS",
-                              style: TextStyle(
+                              style: GoogleFonts.kanit(textStyle:TextStyle(
                                   color: Color.fromRGBO(255, 255, 255, 1),
                                   fontSize: 18,
-                                  fontWeight: FontWeight.w700),
+                                  fontWeight: FontWeight.w700)),
                             ),
                           ),
                         ),
@@ -219,9 +220,9 @@ class _UserPageState extends State<UserPage> {
                     unselectedLabelColor: Color.fromRGBO(203, 202, 205, 1),
                   ),
                   tabs: [
-                    Text('News'),
-                    Text('Contact'),
-                    Text('Documents'),
+                    Text('News',style: GoogleFonts.kanit()),
+                    Text('Contact',style: GoogleFonts.kanit()),
+                    Text('Documents',style: GoogleFonts.kanit()),
                   ],
                   views: [
                     NewsComponent(),

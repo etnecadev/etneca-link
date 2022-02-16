@@ -1,6 +1,9 @@
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_project_template/src/utils/index.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class ShipDataPage extends StatelessWidget {
   static const routeName = '/shipdatapage';
@@ -8,6 +11,9 @@ class ShipDataPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (defaultTargetPlatform == TargetPlatform.android) {
+      AndroidGoogleMapsFlutter.useAndroidViewSurface = true;
+    }
     return Scaffold(
       body: Container(
         child: ContainedTabBarView(
@@ -23,9 +29,9 @@ class ShipDataPage extends StatelessWidget {
             unselectedLabelColor: Color.fromRGBO(203, 202, 205, 1),
           ),
           tabs: [
-            Text('ข้อมูล VMS'),
-            Text('สถานะอุปกณ์'),
-            Text('ประวัติตรวจเช็ค'),
+            Text('ข้อมูล VMS', style: GoogleFonts.kanit()),
+            Text('สถานะอุปกณ์', style: GoogleFonts.kanit()),
+            Text('ประวัติตรวจเช็ค', style: GoogleFonts.kanit()),
           ],
           views: [
             SingleChildScrollView(
@@ -35,11 +41,14 @@ class ShipDataPage extends StatelessWidget {
                   children: [
                     Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.red,
+                        borderRadius: BorderRadius.circular(50),
                       ),
                       width: double.infinity,
                       height: 350,
+                      child: GoogleMap(
+                        initialCameraPosition:
+                            const CameraPosition(target: LatLng(0.0, 0.0)),
+                      ),
                     ),
                     Container(
                       height: 550,
@@ -64,27 +73,40 @@ class ShipDataPage extends StatelessWidget {
                         children: [
                           Text(
                             "Helix Test",
-                            style: TextStyle(
-                                color: Colors.red[900],
-                                fontSize: 30,
-                                fontWeight: FontWeight.w700),
+                            style: GoogleFonts.kanit(
+                                textStyle: TextStyle(
+                                    color: Colors.red[900],
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.w700)),
                           ),
                           Row(
                             children: [
-                              Expanded(child: Text("หมายเลขอุปกรณ์")),
-                              Expanded(child: Text("01259148SKY2EF9")),
+                              Expanded(
+                                  child: Text("หมายเลขอุปกรณ์",
+                                      style: GoogleFonts.kanit())),
+                              Expanded(
+                                  child: Text("01259148SKY2EF9",
+                                      style: GoogleFonts.kanit())),
                             ],
                           ),
                           Row(
                             children: [
-                              Expanded(child: Text("ทะเบียนเรือ")),
-                              Expanded(child: Text("4545777")),
+                              Expanded(
+                                  child: Text("ทะเบียนเรือ",
+                                      style: GoogleFonts.kanit())),
+                              Expanded(
+                                  child: Text("4545777",
+                                      style: GoogleFonts.kanit())),
                             ],
                           ),
                           Row(
                             children: [
-                              Expanded(child: Text("เวลาจีพีเอส")),
-                              Expanded(child: Text("22/09/2021 10:29:12")),
+                              Expanded(
+                                  child: Text("เวลาจีพีเอส",
+                                      style: GoogleFonts.kanit())),
+                              Expanded(
+                                  child: Text("22/09/2021 10:29:12",
+                                      style: GoogleFonts.kanit())),
                             ],
                           ),
                           SizedBox(
@@ -92,67 +114,104 @@ class ShipDataPage extends StatelessWidget {
                           ),
                           Text(
                             "ตำแหน่ง (VMS)",
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.w700),
+                            style: GoogleFonts.kanit(
+                                textStyle: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.w700)),
                           ),
                           Row(
                             children: [
-                              Expanded(child: Text("ละติจูด(Lat)")),
-                              Expanded(child: Text("6° 53.162' N")),
+                              Expanded(
+                                  child: Text("ละติจูด(Lat)",
+                                      style: GoogleFonts.kanit())),
+                              Expanded(
+                                  child: Text("6° 53.162' N",
+                                      style: GoogleFonts.kanit())),
                             ],
                           ),
                           Row(
                             children: [
-                              Expanded(child: Text("ลองติจูด(Long)")),
-                              Expanded(child: Text("101° 15.412' E")),
+                              Expanded(
+                                  child: Text("ลองติจูด(Long)",
+                                      style: GoogleFonts.kanit())),
+                              Expanded(
+                                  child: Text("101° 15.412' E",
+                                      style: GoogleFonts.kanit())),
                             ],
                           ),
                           Row(
                             children: [
-                              Expanded(child: Text("สถานที่ใกล้เคียง")),
-                              Expanded(child: Text("-")),
+                              Expanded(
+                                  child: Text("สถานที่ใกล้เคียง",
+                                      style: GoogleFonts.kanit())),
+                              Expanded(
+                                  child: Text("-", style: GoogleFonts.kanit())),
                             ],
                           ),
                           Row(
                             children: [
-                              Expanded(child: Text("ความเร็ว(Knot)")),
-                              Expanded(child: Text("0.10 Knots")),
+                              Expanded(
+                                  child: Text("ความเร็ว(Knot)",
+                                      style: GoogleFonts.kanit())),
+                              Expanded(
+                                  child: Text("0.10 Knots",
+                                      style: GoogleFonts.kanit())),
                             ],
                           ),
                           Row(
                             children: [
-                              Expanded(child: Text("ทิศทาง")),
-                              Expanded(child: Text("0.00°")),
+                              Expanded(
+                                  child: Text("ทิศทาง",
+                                      style: GoogleFonts.kanit())),
+                              Expanded(
+                                  child: Text("0.00°",
+                                      style: GoogleFonts.kanit())),
                             ],
                           ),
                           Row(
                             children: [
-                              Expanded(child: Text("แรงดันไฟฟ้า")),
-                              Expanded(child: Text("-")),
+                              Expanded(
+                                  child: Text("แรงดันไฟฟ้า",
+                                      style: GoogleFonts.kanit())),
+                              Expanded(
+                                  child: Text("-", style: GoogleFonts.kanit())),
                             ],
                           ),
                           Row(
                             children: [
-                              Expanded(child: Text("สัญญาณจีพีเอส")),
-                              Expanded(child: Text("-")),
+                              Expanded(
+                                  child: Text("สัญญาณจีพีเอส",
+                                      style: GoogleFonts.kanit())),
+                              Expanded(
+                                  child: Text("-", style: GoogleFonts.kanit())),
                             ],
                           ),
                           Row(
                             children: [
-                              Expanded(child: Text("สัญญาณดาวเทียม")),
-                              Expanded(child: Text("-")),
+                              Expanded(
+                                  child: Text("สัญญาณดาวเทียม",
+                                      style: GoogleFonts.kanit())),
+                              Expanded(
+                                  child: Text("-", style: GoogleFonts.kanit())),
                             ],
                           ),
                           Row(
                             children: [
-                              Expanded(child: Text("วันครบกำหนดค่าใช้บริการ")),
-                              Expanded(child: Text("02/12/545")),
+                              Expanded(
+                                  child: Text("วันครบกำหนดค่าใช้บริการ",
+                                      style: GoogleFonts.kanit())),
+                              Expanded(
+                                  child: Text("02/12/545",
+                                      style: GoogleFonts.kanit())),
                             ],
                           ),
                           Row(
                             children: [
-                              Expanded(child: Text("วันหมดรับประกันอุปกรณ์")),
-                              Expanded(child: Text("08/04/2562")),
+                              Expanded(
+                                  child: Text("วันหมดรับประกันอุปกรณ์",
+                                      style: GoogleFonts.kanit())),
+                              Expanded(
+                                  child: Text("08/04/2562",
+                                      style: GoogleFonts.kanit())),
                             ],
                           ),
                           Row(
@@ -168,10 +227,11 @@ class ShipDataPage extends StatelessWidget {
                                     onPressed: () {},
                                     child: Text(
                                       "24 ตำแหน่งล่าสุด",
-                                      style: TextStyle(
-                                          color: Colors.red[900],
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w700),
+                                      style: GoogleFonts.kanit(
+                                          textStyle: TextStyle(
+                                              color: Colors.red[900],
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.w700)),
                                     ),
                                   ),
                                 ),
@@ -186,10 +246,11 @@ class ShipDataPage extends StatelessWidget {
                                     onPressed: () {},
                                     child: Text(
                                       "ประวัติการเดินเรือ",
-                                      style: TextStyle(
-                                          color: Colors.red[900],
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w700),
+                                      style: GoogleFonts.kanit(
+                                          textStyle: TextStyle(
+                                              color: Colors.red[900],
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.w700)),
                                     ),
                                   ),
                                 ),
@@ -203,8 +264,8 @@ class ShipDataPage extends StatelessWidget {
                 ),
               ),
             ),
-            Container(color: Colors.green),
-            Container(color: Colors.blue),
+            Container(color: Colors.white),
+            Container(color: Colors.white),
           ],
           onChange: (index) => print(index),
         ),

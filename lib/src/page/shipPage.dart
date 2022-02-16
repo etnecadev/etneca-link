@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_template/src/utils/index.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SecondPage extends StatefulWidget {
   static const routeName = '/ship';
@@ -44,10 +45,10 @@ _Card(context, color) {
           children: [
             Text(
               "เรือประมงพาณิชย์",
-              style: TextStyle(
+              style: GoogleFonts.kanit(textStyle:TextStyle(
                   color: Colors.grey,
                   fontSize: 18,
-                  fontWeight: FontWeight.w700),
+                  fontWeight: FontWeight.w700)),
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -55,17 +56,17 @@ _Card(context, color) {
               children: [
                 Text(
                   "Gen 1",
-                  style: TextStyle(
+                  style: GoogleFonts.kanit(textStyle:TextStyle(
                       color: Colors.grey,
                       fontSize: 20,
-                      fontWeight: FontWeight.w400),
+                      fontWeight: FontWeight.w400)),
                 ),
                 Text(
                   "Helix Test",
-                  style: TextStyle(
+                  style: GoogleFonts.kanit(textStyle:TextStyle(
                       color: Colors.black,
                       fontSize: 20,
-                      fontWeight: FontWeight.w700),
+                      fontWeight: FontWeight.w700)),
                 ),
               ],
             ),
@@ -81,16 +82,17 @@ class _SecondPageState extends State<SecondPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromRGBO(255, 255, 255, 1),
-            appBar: AppBar(
+      appBar: AppBar(
         backgroundColor: Color.fromRGBO(255, 255, 255, 1),
         elevation: 0,
         centerTitle: true,
         title: Text(
           'Ship',
-          style: TextStyle(
-              color: Color.fromRGBO(93, 90, 97, 1),
-              fontSize: 20,
-              fontWeight: FontWeight.w500),
+          style: GoogleFonts.kanit(
+              textStyle: TextStyle(
+                  color: Color.fromRGBO(93, 90, 97, 1),
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500)),
         ),
       ),
       body: Container(
@@ -102,10 +104,11 @@ class _SecondPageState extends State<SecondPage> {
               margin: EdgeInsets.only(right: 8),
               child: Text(
                 "จำนวนเรือ 2 ลำ",
-                style: TextStyle(
+                style: GoogleFonts.kanit(
+              textStyle:TextStyle(
                     color: Colors.black,
                     fontSize: 20,
-                    fontWeight: FontWeight.w700),
+                    fontWeight: FontWeight.w700)),
               ),
             ),
             Flexible(

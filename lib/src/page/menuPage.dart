@@ -50,8 +50,8 @@ class MenuPage extends StatelessWidget {
           unselectedLabelColor: AppTheme.light.primaryColor,
         ),
         tabs: [
-          Text('menu'),
-          Text('Notification'),
+          Text('Dashboard', style: GoogleFonts.kanit()),
+          Text('Notification', style: GoogleFonts.kanit()),
         ],
         views: [
           Container(
@@ -153,7 +153,8 @@ _submenu(context, image, icon, title, route) {
             margin: EdgeInsets.only(left: 5, bottom: 5),
             child: Text(
               title,
-              style: TextStyle(fontSize: 25, color: Colors.white),
+              style: GoogleFonts.kanit(
+                  textStyle: TextStyle(fontSize: 25, color: Colors.white)),
             ),
           )
         ],

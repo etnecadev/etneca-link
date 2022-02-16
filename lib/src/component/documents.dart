@@ -1,6 +1,7 @@
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class DocumentsComponent extends StatelessWidget {
@@ -105,10 +106,10 @@ class DocumentsComponent extends StatelessWidget {
                         padding: EdgeInsets.all(20),
                         child: Text(
                           "ข้อมูลบริษัท",
-                          style: TextStyle(
+                          style: GoogleFonts.kanit(textStyle:TextStyle(
                               color: Color.fromRGBO(93, 90, 97, 1),
                               fontSize: 18,
-                              fontWeight: FontWeight.w800),
+                              fontWeight: FontWeight.w800)),
                         ),
                       ),
                       collapsed: SizedBox(),
@@ -146,10 +147,10 @@ class DocumentsComponent extends StatelessWidget {
                       padding: EdgeInsets.all(20),
                       child: Text(
                         "เอกสารให้ดาวน์โหลด",
-                        style: TextStyle(
+                        style: GoogleFonts.kanit(textStyle:TextStyle(
                             color: Color.fromRGBO(93, 90, 97, 1),
                             fontSize: 18,
-                            fontWeight: FontWeight.w800),
+                            fontWeight: FontWeight.w800)),
                       ),
                     ),
                     collapsed: SizedBox(),
@@ -185,10 +186,10 @@ class DocumentsComponent extends StatelessWidget {
                       padding: EdgeInsets.all(20),
                       child: Text(
                         "นโยบายและเงื่อนไขการใช้งาน",
-                        style: TextStyle(
+                        style: GoogleFonts.kanit(textStyle:TextStyle(
                             color: Color.fromRGBO(93, 90, 97, 1),
                             fontSize: 18,
-                            fontWeight: FontWeight.w800),
+                            fontWeight: FontWeight.w800)),
                       ),
                     ),
                     collapsed: SizedBox(),
@@ -224,10 +225,10 @@ class DocumentsComponent extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(item["name"],
-                      style: TextStyle(
+                      style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Color.fromRGBO(93, 90, 97, 1),
                           fontSize: 15,
-                          fontWeight: FontWeight.w700)),
+                          fontWeight: FontWeight.w700))),
                 ),
                 flex: 4,
               ),
@@ -262,10 +263,10 @@ class DocumentsComponent extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(item["name"],
-                      style: TextStyle(
+                      style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Color.fromRGBO(93, 90, 97, 1),
                           fontSize: 15,
-                          fontWeight: FontWeight.w700)),
+                          fontWeight: FontWeight.w700))),
                 ),
                 flex: 4,
               ),
@@ -300,10 +301,10 @@ class DocumentsComponent extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(item["name"],
-                      style: TextStyle(
+                      style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Color.fromRGBO(93, 90, 97, 1),
                           fontSize: 15,
-                          fontWeight: FontWeight.w700)),
+                          fontWeight: FontWeight.w700))),
                 ),
                 flex: 4,
               ),

@@ -1,6 +1,7 @@
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ContactComponent extends StatelessWidget {
@@ -54,10 +55,10 @@ class ContactComponent extends StatelessWidget {
                     padding: EdgeInsets.all(20),
                     child: Text(
                       "ติดต่อเรา",
-                      style: TextStyle(
+                      style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Color.fromRGBO(93, 90, 97, 1),
                           fontSize: 18,
-                          fontWeight: FontWeight.w800),
+                          fontWeight: FontWeight.w800)),
                     ),
                   ),
                   collapsed: SizedBox(),
@@ -85,10 +86,10 @@ class ContactComponent extends StatelessWidget {
                  margin: EdgeInsets.only(left: 30),
                
                 child: Text("อีเมล์ฝ่ายลูกค้าสัมพันธ์",
-                    style: TextStyle(
+                    style: GoogleFonts.kanit(textStyle:TextStyle(
                         color: Color.fromRGBO(93, 90, 97, 1),
                         fontSize: 15,
-                        fontWeight: FontWeight.w700)),
+                        fontWeight: FontWeight.w700))),
               ),
               // margin: EdgeInsets.symmetric(horizontal: 30),
             ),
@@ -99,10 +100,10 @@ class ContactComponent extends StatelessWidget {
                 margin: EdgeInsets.only(right: 20),
                 alignment: Alignment.centerRight,
                 child: Text("admin@etneca.co.th",
-                     style: TextStyle(
+                     style: GoogleFonts.kanit(textStyle:TextStyle(
                                 color: Color.fromRGBO(93, 90, 97, 1),
                                 fontSize: 16,
-                                fontWeight: FontWeight.w500)),
+                                fontWeight: FontWeight.w500))),
               ),
               // margin: EdgeInsets.symmetric(horizontal: 30),
             ),
@@ -123,10 +124,10 @@ class ContactComponent extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(item["name"],
-                      style: TextStyle(
+                      style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Color.fromRGBO(93, 90, 97, 1),
                           fontSize: 15,
-                          fontWeight: FontWeight.w700)),
+                          fontWeight: FontWeight.w700))),
                 ),
                 flex: 4,
               ),
@@ -135,10 +136,10 @@ class ContactComponent extends StatelessWidget {
                   child: Container(
                       child: Text(item["phone"],
                           textAlign: TextAlign.left,
-                          style: TextStyle(
+                          style: GoogleFonts.kanit(textStyle:TextStyle(
                               color: Color.fromRGBO(93, 90, 97, 1),
                               fontSize: 14,
-                              fontWeight: FontWeight.w500))),
+                              fontWeight: FontWeight.w500)))),
                   alignment: Alignment.centerRight,
                 ),
                 flex: 4,

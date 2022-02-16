@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 class PackagesPage extends StatelessWidget {
@@ -14,10 +15,10 @@ class PackagesPage extends StatelessWidget {
         centerTitle: true,
         title: Text(
           'Packages',
-          style: TextStyle(
+          style: GoogleFonts.kanit(textStyle:TextStyle(
               color: Color.fromRGBO(93, 90, 97, 1),
               fontSize: 20,
-              fontWeight: FontWeight.w500),
+              fontWeight: FontWeight.w500)),
         ),
       ),
       body: SingleChildScrollView(
@@ -75,10 +76,10 @@ class PackagesPage extends StatelessWidget {
                       Flexible(
                           child: ListTile(
                         title: Text("เรือประมง เรือน้ำมัน เรือบรรทุกสินค้า ฯลฯ",
-                            style: TextStyle(
+                            style: GoogleFonts.kanit(textStyle:TextStyle(
                                 color: Color.fromRGBO(93, 90, 97, 1),
                                 fontSize: 16,
-                                fontWeight: FontWeight.w700)),
+                                fontWeight: FontWeight.w700))),
                         subtitle: Row(
                           children: [
                             FaIcon(
@@ -90,10 +91,10 @@ class PackagesPage extends StatelessWidget {
                               width: 10,
                             ),
                             Text("แสดงตำแหน่งทุก 1 ชั่วโมง",
-                                style: TextStyle(
+                                style: GoogleFonts.kanit(textStyle:TextStyle(
                                     color: Color.fromRGBO(93, 90, 97, 1),
                                     fontSize: 14,
-                                    fontWeight: FontWeight.w400)),
+                                    fontWeight: FontWeight.w400))),
                           ],
                         ),
                       ))
@@ -104,10 +105,10 @@ class PackagesPage extends StatelessWidget {
                     margin: EdgeInsets.symmetric(horizontal: 30),
                     child: Text(
                       "2,000 บาท",
-                      style: TextStyle(
+                      style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Colors.red,
                           fontSize: 16,
-                          fontWeight: FontWeight.w700),
+                          fontWeight: FontWeight.w700)),
                     ),
                   ),
                   Padding(
@@ -115,10 +116,10 @@ class PackagesPage extends StatelessWidget {
                     child: Text(
                       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ante lectus. Praesent nibh ante, pulvinar sed felis eget, congue iaculis nisi. Sed et tortor turpis. Sed pretium, mi ut venenatis pharetra, libero quam tincidunt nisi, id fermentum sem nisi eu est.",
                       textAlign: TextAlign.justify,
-                      style: TextStyle(
+                      style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Color.fromRGBO(93, 90, 97, 1),
                           fontSize: 14,
-                          fontWeight: FontWeight.w400),
+                          fontWeight: FontWeight.w400)),
                     ),
                   ),
                   Container(
@@ -195,10 +196,10 @@ class PackagesPage extends StatelessWidget {
                       Flexible(
                           child: ListTile(
                         title: Text("เรือประมง เรือน้ำมัน เรือบรรทุกสินค้า ฯลฯ",
-                            style: TextStyle(
+                            style: GoogleFonts.kanit(textStyle:TextStyle(
                                 color: Color.fromRGBO(93, 90, 97, 1),
                                 fontSize: 16,
-                                fontWeight: FontWeight.w700)),
+                                fontWeight: FontWeight.w700))),
                         subtitle: Row(
                           children: [
                             FaIcon(
@@ -210,10 +211,10 @@ class PackagesPage extends StatelessWidget {
                               width: 10,
                             ),
                             Text("แสดงตำแหน่งทุก 1 ชั่วโมง",
-                                style: TextStyle(
+                                style: GoogleFonts.kanit(textStyle:TextStyle(
                                     color: Color.fromRGBO(93, 90, 97, 1),
                                     fontSize: 14,
-                                    fontWeight: FontWeight.w400)),
+                                    fontWeight: FontWeight.w400))),
                           ],
                         ),
                       ))
@@ -224,10 +225,10 @@ class PackagesPage extends StatelessWidget {
                     margin: EdgeInsets.symmetric(horizontal: 30),
                     child: Text(
                       "2,000 บาท",
-                      style: TextStyle(
+                      style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Colors.red,
                           fontSize: 16,
-                          fontWeight: FontWeight.w700),
+                          fontWeight: FontWeight.w700)),
                     ),
                   ),
                   Padding(
@@ -235,10 +236,10 @@ class PackagesPage extends StatelessWidget {
                     child: Text(
                       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ante lectus. Praesent nibh ante, pulvinar sed felis eget, congue iaculis nisi. Sed et tortor turpis. Sed pretium, mi ut venenatis pharetra, libero quam tincidunt nisi, id fermentum sem nisi eu est.",
                       textAlign: TextAlign.justify,
-                      style: TextStyle(
+                      style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Color.fromRGBO(93, 90, 97, 1),
                           fontSize: 14,
-                          fontWeight: FontWeight.w400),
+                          fontWeight: FontWeight.w400)),
                     ),
                   ),
                   Container(
@@ -315,10 +316,10 @@ class PackagesPage extends StatelessWidget {
                       Flexible(
                           child: ListTile(
                         title: Text("เรือประมง เรือน้ำมัน เรือบรรทุกสินค้า ฯลฯ",
-                            style: TextStyle(
+                            style: GoogleFonts.kanit(textStyle:TextStyle(
                                 color: Color.fromRGBO(93, 90, 97, 1),
                                 fontSize: 16,
-                                fontWeight: FontWeight.w700)),
+                                fontWeight: FontWeight.w700))),
                         subtitle: Row(
                           children: [
                             FaIcon(
@@ -330,10 +331,10 @@ class PackagesPage extends StatelessWidget {
                               width: 10,
                             ),
                             Text("แสดงตำแหน่งทุก 1 ชั่วโมง",
-                                style: TextStyle(
+                                style: GoogleFonts.kanit(textStyle:TextStyle(
                                     color: Color.fromRGBO(93, 90, 97, 1),
                                     fontSize: 14,
-                                    fontWeight: FontWeight.w400)),
+                                    fontWeight: FontWeight.w400))),
                           ],
                         ),
                       ))
@@ -344,10 +345,10 @@ class PackagesPage extends StatelessWidget {
                     margin: EdgeInsets.symmetric(horizontal: 30),
                     child: Text(
                       "2,000 บาท",
-                      style: TextStyle(
+                      style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Colors.red,
                           fontSize: 16,
-                          fontWeight: FontWeight.w700),
+                          fontWeight: FontWeight.w700)),
                     ),
                   ),
                   Padding(
@@ -355,10 +356,10 @@ class PackagesPage extends StatelessWidget {
                     child: Text(
                       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ante lectus. Praesent nibh ante, pulvinar sed felis eget, congue iaculis nisi. Sed et tortor turpis. Sed pretium, mi ut venenatis pharetra, libero quam tincidunt nisi, id fermentum sem nisi eu est.",
                       textAlign: TextAlign.justify,
-                      style: TextStyle(
+                      style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Color.fromRGBO(93, 90, 97, 1),
                           fontSize: 14,
-                          fontWeight: FontWeight.w400),
+                          fontWeight: FontWeight.w400)),
                     ),
                   ),
                   Container(
@@ -437,10 +438,10 @@ class PackagesPage extends StatelessWidget {
                       Flexible(
                           child: ListTile(
                         title: Text("เรือประมง เรือน้ำมัน เรือบรรทุกสินค้า ฯลฯ",
-                            style: TextStyle(
+                            style: GoogleFonts.kanit(textStyle:TextStyle(
                                 color: Color.fromRGBO(93, 90, 97, 1),
                                 fontSize: 16,
-                                fontWeight: FontWeight.w700)),
+                                fontWeight: FontWeight.w700))),
                         subtitle: Row(
                           children: [
                             FaIcon(
@@ -452,10 +453,10 @@ class PackagesPage extends StatelessWidget {
                               width: 10,
                             ),
                             Text("แสดงตำแหน่งทุก 1 ชั่วโมง",
-                                style: TextStyle(
+                                style: GoogleFonts.kanit(textStyle:TextStyle(
                                     color: Color.fromRGBO(93, 90, 97, 1),
                                     fontSize: 14,
-                                    fontWeight: FontWeight.w400)),
+                                    fontWeight: FontWeight.w400))),
                           ],
                         ),
                       ))
@@ -466,10 +467,10 @@ class PackagesPage extends StatelessWidget {
                     margin: EdgeInsets.symmetric(horizontal: 30),
                     child: Text(
                       "2,000 บาท",
-                      style: TextStyle(
+                      style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Colors.red,
                           fontSize: 16,
-                          fontWeight: FontWeight.w700),
+                          fontWeight: FontWeight.w700)),
                     ),
                   ),
                   Padding(
@@ -477,10 +478,10 @@ class PackagesPage extends StatelessWidget {
                     child: Text(
                       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ante lectus. Praesent nibh ante, pulvinar sed felis eget, congue iaculis nisi. Sed et tortor turpis. Sed pretium, mi ut venenatis pharetra, libero quam tincidunt nisi, id fermentum sem nisi eu est.",
                       textAlign: TextAlign.justify,
-                      style: TextStyle(
+                      style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Color.fromRGBO(93, 90, 97, 1),
                           fontSize: 14,
-                          fontWeight: FontWeight.w400),
+                          fontWeight: FontWeight.w400)),
                     ),
                   ),
                   Container(
@@ -557,10 +558,10 @@ class PackagesPage extends StatelessWidget {
                       Flexible(
                           child: ListTile(
                         title: Text("เรือประมง เรือน้ำมัน เรือบรรทุกสินค้า ฯลฯ",
-                            style: TextStyle(
+                            style: GoogleFonts.kanit(textStyle:TextStyle(
                                 color: Color.fromRGBO(93, 90, 97, 1),
                                 fontSize: 16,
-                                fontWeight: FontWeight.w700)),
+                                fontWeight: FontWeight.w700))),
                         subtitle: Row(
                           children: [
                             FaIcon(
@@ -572,10 +573,10 @@ class PackagesPage extends StatelessWidget {
                               width: 10,
                             ),
                             Text("แสดงตำแหน่งทุก 1 ชั่วโมง",
-                                style: TextStyle(
+                                style: GoogleFonts.kanit(textStyle:TextStyle(
                                     color: Color.fromRGBO(93, 90, 97, 1),
                                     fontSize: 14,
-                                    fontWeight: FontWeight.w400)),
+                                    fontWeight: FontWeight.w400))),
                           ],
                         ),
                       ))
@@ -586,10 +587,10 @@ class PackagesPage extends StatelessWidget {
                     margin: EdgeInsets.symmetric(horizontal: 30),
                     child: Text(
                       "2,000 บาท",
-                      style: TextStyle(
+                      style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Colors.red,
                           fontSize: 16,
-                          fontWeight: FontWeight.w700),
+                          fontWeight: FontWeight.w700)),
                     ),
                   ),
                   Padding(
@@ -597,10 +598,10 @@ class PackagesPage extends StatelessWidget {
                     child: Text(
                       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ante lectus. Praesent nibh ante, pulvinar sed felis eget, congue iaculis nisi. Sed et tortor turpis. Sed pretium, mi ut venenatis pharetra, libero quam tincidunt nisi, id fermentum sem nisi eu est.",
                       textAlign: TextAlign.justify,
-                      style: TextStyle(
+                      style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Color.fromRGBO(93, 90, 97, 1),
                           fontSize: 14,
-                          fontWeight: FontWeight.w400),
+                          fontWeight: FontWeight.w400)),
                     ),
                   ),
                   Container(
@@ -677,10 +678,10 @@ class PackagesPage extends StatelessWidget {
                       Flexible(
                           child: ListTile(
                         title: Text("เรือประมง เรือน้ำมัน เรือบรรทุกสินค้า ฯลฯ",
-                            style: TextStyle(
+                            style: GoogleFonts.kanit(textStyle:TextStyle(
                                 color: Color.fromRGBO(93, 90, 97, 1),
                                 fontSize: 16,
-                                fontWeight: FontWeight.w700)),
+                                fontWeight: FontWeight.w700))),
                         subtitle: Row(
                           children: [
                             FaIcon(
@@ -692,10 +693,10 @@ class PackagesPage extends StatelessWidget {
                               width: 10,
                             ),
                             Text("แสดงตำแหน่งทุก 1 ชั่วโมง",
-                                style: TextStyle(
+                                style: GoogleFonts.kanit(textStyle:TextStyle(
                                     color: Color.fromRGBO(93, 90, 97, 1),
                                     fontSize: 14,
-                                    fontWeight: FontWeight.w400)),
+                                    fontWeight: FontWeight.w400))),
                           ],
                         ),
                       ))
@@ -706,10 +707,10 @@ class PackagesPage extends StatelessWidget {
                     margin: EdgeInsets.symmetric(horizontal: 30),
                     child: Text(
                       "2,000 บาท",
-                      style: TextStyle(
+                      style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Colors.red,
                           fontSize: 16,
-                          fontWeight: FontWeight.w700),
+                          fontWeight: FontWeight.w700)),
                     ),
                   ),
                   Padding(
@@ -717,10 +718,10 @@ class PackagesPage extends StatelessWidget {
                     child: Text(
                       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ante lectus. Praesent nibh ante, pulvinar sed felis eget, congue iaculis nisi. Sed et tortor turpis. Sed pretium, mi ut venenatis pharetra, libero quam tincidunt nisi, id fermentum sem nisi eu est.",
                       textAlign: TextAlign.justify,
-                      style: TextStyle(
+                      style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Color.fromRGBO(93, 90, 97, 1),
                           fontSize: 14,
-                          fontWeight: FontWeight.w400),
+                          fontWeight: FontWeight.w400)),
                     ),
                   ),
                   Container(
