@@ -45,7 +45,7 @@ class NotificationPage extends StatelessWidget {
               textStyle:TextStyle(
                                     color: Color.fromRGBO(101, 164, 150, 1),
                                     fontSize: 16,
-                                    fontWeight: FontWeight.w700))),
+                                    fontWeight: FontWeight.w500))),
                           ),
                           Container(
                             padding: EdgeInsets.all(20),
@@ -54,7 +54,7 @@ class NotificationPage extends StatelessWidget {
               textStyle:TextStyle(
                                     color: Color.fromRGBO(237, 116, 108, 1),
                                     fontSize: 14,
-                                    fontWeight: FontWeight.w700))),
+                                    fontWeight: FontWeight.w500))),
                           ),
                         ],
                       ),
@@ -68,7 +68,7 @@ class NotificationPage extends StatelessWidget {
               textStyle:TextStyle(
                                 color: Color.fromRGBO(93, 90, 97, 1),
                                 fontSize: 16,
-                                fontWeight: FontWeight.w700))),
+                                fontWeight: FontWeight.w500))),
                       ),
                     ],
                   ),

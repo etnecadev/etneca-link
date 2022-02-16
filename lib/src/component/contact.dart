@@ -58,7 +58,7 @@ class ContactComponent extends StatelessWidget {
                       style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Color.fromRGBO(93, 90, 97, 1),
                           fontSize: 18,
-                          fontWeight: FontWeight.w800)),
+                          fontWeight: FontWeight.w600)),
                     ),
                   ),
                   collapsed: SizedBox(),
@@ -89,7 +89,7 @@ class ContactComponent extends StatelessWidget {
                     style: GoogleFonts.kanit(textStyle:TextStyle(
                         color: Color.fromRGBO(93, 90, 97, 1),
                         fontSize: 15,
-                        fontWeight: FontWeight.w700))),
+                        fontWeight: FontWeight.w500))),
               ),
               // margin: EdgeInsets.symmetric(horizontal: 30),
             ),
@@ -127,7 +127,7 @@ class ContactComponent extends StatelessWidget {
                       style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Color.fromRGBO(93, 90, 97, 1),
                           fontSize: 15,
-                          fontWeight: FontWeight.w700))),
+                          fontWeight: FontWeight.w500))),
                 ),
                 flex: 4,
               ),

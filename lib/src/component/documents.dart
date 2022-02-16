@@ -109,7 +109,7 @@ class DocumentsComponent extends StatelessWidget {
                           style: GoogleFonts.kanit(textStyle:TextStyle(
                               color: Color.fromRGBO(93, 90, 97, 1),
                               fontSize: 18,
-                              fontWeight: FontWeight.w800)),
+                              fontWeight: FontWeight.w500)),
                         ),
                       ),
                       collapsed: SizedBox(),
@@ -150,7 +150,7 @@ class DocumentsComponent extends StatelessWidget {
                         style: GoogleFonts.kanit(textStyle:TextStyle(
                             color: Color.fromRGBO(93, 90, 97, 1),
                             fontSize: 18,
-                            fontWeight: FontWeight.w800)),
+                            fontWeight: FontWeight.w500)),
                       ),
                     ),
                     collapsed: SizedBox(),
@@ -189,7 +189,7 @@ class DocumentsComponent extends StatelessWidget {
                         style: GoogleFonts.kanit(textStyle:TextStyle(
                             color: Color.fromRGBO(93, 90, 97, 1),
                             fontSize: 18,
-                            fontWeight: FontWeight.w800)),
+                            fontWeight: FontWeight.w500)),
                       ),
                     ),
                     collapsed: SizedBox(),
@@ -228,7 +228,7 @@ class DocumentsComponent extends StatelessWidget {
                       style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Color.fromRGBO(93, 90, 97, 1),
                           fontSize: 15,
-                          fontWeight: FontWeight.w700))),
+                          fontWeight: FontWeight.w400))),
                 ),
                 flex: 4,
               ),
@@ -266,7 +266,7 @@ class DocumentsComponent extends StatelessWidget {
                       style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Color.fromRGBO(93, 90, 97, 1),
                           fontSize: 15,
-                          fontWeight: FontWeight.w700))),
+                          fontWeight: FontWeight.w400))),
                 ),
                 flex: 4,
               ),
@@ -304,7 +304,7 @@ class DocumentsComponent extends StatelessWidget {
                       style: GoogleFonts.kanit(textStyle:TextStyle(
                           color: Color.fromRGBO(93, 90, 97, 1),
                           fontSize: 15,
-                          fontWeight: FontWeight.w700))),
+                          fontWeight: FontWeight.w400))),
                 ),
                 flex: 4,
               ),

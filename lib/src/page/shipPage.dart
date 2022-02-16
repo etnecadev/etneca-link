@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_template/src/utils/index.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SecondPage extends StatefulWidget {
@@ -32,9 +33,11 @@ _Card(context, color) {
       ),
       child: Container(
         padding: EdgeInsets.all(10),
-        margin: EdgeInsets.only(left: 50),
+        margin: EdgeInsets.only(left: 30),
+
         decoration: BoxDecoration(
           color: Colors.white,
+
           borderRadius: BorderRadius.only(
               // bottomLeft: Radius.circular(100),
               bottomRight: Radius.circular(10),
@@ -46,9 +49,9 @@ _Card(context, color) {
             Text(
               "เรือประมงพาณิชย์",
               style: GoogleFonts.kanit(textStyle:TextStyle(
-                  color: Colors.grey,
+                 color: Color.fromRGBO(93, 90, 97, 1),
                   fontSize: 18,
-                  fontWeight: FontWeight.w700)),
+                  fontWeight: FontWeight.w500)),
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -57,16 +60,16 @@ _Card(context, color) {
                 Text(
                   "Gen 1",
                   style: GoogleFonts.kanit(textStyle:TextStyle(
-                      color: Colors.grey,
-                      fontSize: 20,
+                     color: Colors.red,
+                      fontSize: 17,
                       fontWeight: FontWeight.w400)),
                 ),
                 Text(
                   "Helix Test",
                   style: GoogleFonts.kanit(textStyle:TextStyle(
-                      color: Colors.black,
+                      color: Color.fromRGBO(93, 90, 97, 1),
                       fontSize: 20,
-                      fontWeight: FontWeight.w700)),
+                      fontWeight: FontWeight.w600)),
                 ),
               ],
             ),
@@ -102,13 +105,26 @@ class _SecondPageState extends State<SecondPage> {
           children: [
             Container(
               margin: EdgeInsets.only(right: 8),
-              child: Text(
-                "จำนวนเรือ 2 ลำ",
-                style: GoogleFonts.kanit(
-              textStyle:TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w700)),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                   Padding(
+                     padding: const EdgeInsets.all(8.0),
+                     child: FaIcon(
+                              FontAwesomeIcons.ship,
+                              color: Color.fromRGBO(93, 90, 97, 1),
+                              size: 20,
+                            ),
+                   ),
+                  Text(
+                    "จำนวนเรือ 2 ลำ",
+                    style: GoogleFonts.kanit(
+                  textStyle:TextStyle(
+                          color: Color.fromRGBO(93, 90, 97, 1),
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600)),
+                  ),
+                ],
               ),
             ),
             Flexible(

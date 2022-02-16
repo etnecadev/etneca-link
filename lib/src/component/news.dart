@@ -46,7 +46,7 @@ class NewsComponent extends StatelessWidget {
                                     style: GoogleFonts.kanit(textStyle:TextStyle(
                                         color: Colors.white,
                                         fontSize: 17,
-                                        fontWeight: FontWeight.w800))),
+                                        fontWeight: FontWeight.w600))),
                               ),
                             ),
                             decoration: BoxDecoration(
