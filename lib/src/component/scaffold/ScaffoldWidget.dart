@@ -18,7 +18,7 @@ class ScaffoldWidget extends StatelessWidget {
         elevation: 0.0,
         leading: Center(
           child: IconButton(
-            icon: Icon(Icons.arrow_back_ios_new, size: 30),
+            icon: Icon(Icons.arrow_back_ios_new, size: 25),
             onPressed: () {
               // scaffoldKey.currentState?.openDrawer();
               Navigator.pop(context);
