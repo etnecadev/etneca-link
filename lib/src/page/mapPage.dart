@@ -23,9 +23,9 @@ class _MapPageState extends State<MapPage> {
 
   @override
   Widget build(BuildContext context) {
-      if (defaultTargetPlatform == TargetPlatform.android) {
-  AndroidGoogleMapsFlutter.useAndroidViewSurface = true;
-}
+    if (defaultTargetPlatform == TargetPlatform.android) {
+      AndroidGoogleMapsFlutter.useAndroidViewSurface = true;
+    }
     var _controller = TextEditingController();
     return ScaffoldWidget(
       title: Center(
@@ -51,9 +51,9 @@ class _MapPageState extends State<MapPage> {
           ),
         ),
       ),
-      child: 
-      // Stack(
-      //   children: [
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
           Container(
             child: GoogleMap(
               initialCameraPosition:
@@ -79,9 +79,9 @@ class _MapPageState extends State<MapPage> {
           //           visualDensity: VisualDensity(horizontal: 4, vertical: 2),
           //         ),
           //       ),
-          //     ],
-          //   ),
-          // )
+        ],
+      ),
+      // )
       //   ],
       // ),
     );

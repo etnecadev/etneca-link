@@ -5,22 +5,22 @@ class NotificationPage extends StatelessWidget {
   static const routeName = '/notification';
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color.fromRGBO(255, 255, 255, 1),
-      appBar: AppBar(
-        backgroundColor: Color.fromRGBO(255, 255, 255, 1),
-        elevation: 0,
-        centerTitle: true,
-        title: Text(
-          'Notification',
-          style: GoogleFonts.kanit(
-              textStyle: TextStyle(
-                  color: Color.fromRGBO(93, 90, 97, 1),
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500)),
-        ),
-      ),
-      body: SingleChildScrollView(
+    return Container(
+      color: Color.fromRGBO(255, 255, 255, 1),
+      // appBar: AppBar(
+      //   backgroundColor: Color.fromRGBO(255, 255, 255, 1),
+      //   elevation: 0,
+      //   centerTitle: true,
+      //   title: Text(
+      //     'Notification',
+      //     style: GoogleFonts.kanit(
+      //         textStyle: TextStyle(
+      //             color: Color.fromRGBO(93, 90, 97, 1),
+      //             fontSize: 20,
+      //             fontWeight: FontWeight.w500)),
+      //   ),
+      // ),
+      child: SingleChildScrollView(
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           for (int i = 0; i < 6; i++)
             Container(

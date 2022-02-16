@@ -4,7 +4,6 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class NewsComponent extends StatelessWidget {
-    static const routeName = '/news';
   @override
   Widget build(BuildContext context) {
     return Material(
