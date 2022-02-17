@@ -16,7 +16,7 @@ class MenuPage extends StatelessWidget {
     ]);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppTheme.light.primaryColor,
+        backgroundColor: Color.fromRGBO(203	,69	,73	 ,1),
         elevation: 0.0,
         leading: SizedBox(),
         title: Center(

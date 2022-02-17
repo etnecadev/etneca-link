@@ -32,7 +32,7 @@ class _UserPageState extends State<UserPage> {
           margin: EdgeInsets.symmetric(vertical: 50, horizontal: 15),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(50),
-            color: Color.fromRGBO(240, 39, 70, 1),
+            color: Color.fromRGBO(203	,69	,73	 ,1),
             boxShadow: [
               BoxShadow(
                 color: AppTheme.light.shadowColor,
@@ -127,7 +127,7 @@ class _UserPageState extends State<UserPage> {
             bottomLeft: Radius.circular(40),
             topLeft: Radius.circular(40),
           ),
-          color: Color.fromRGBO(240, 39, 70, 1),
+          color: Color.fromRGBO(203	,69	,73	 ,1),
           boxShadow: [
             BoxShadow(
               color: AppTheme.light.shadowColor,
