@@ -24,19 +24,19 @@ class MenuPage extends StatelessWidget {
           "ETNECA LINK",
           style: GoogleFonts.kanit(textStyle: TextStyle(color: Colors.white)),
         )),
-        actions: [
-          Container(
-            child: CircleAvatar(
-                backgroundColor: Color.fromRGBO(210, 100, 102, 0.5),
-                radius: 50.0,
-                child: ClipOval(
-                  child: CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/profile.jpg'),
-                    radius: 25.0,
-                  ),
-                )),
-          ),
-        ],
+        // actions: [
+        //   Container(
+        //       child: CircleAvatar(
+        //           backgroundColor: Color.fromRGBO(210, 100, 102, 0.5),
+        //           radius: 50.0,
+        //           child: ClipOval(
+        //             child: CircleAvatar(
+        //   backgroundImage: AssetImage('assets/images/profile.jpg'),
+        //   radius: 25.0,
+        //               ),
+        //           )),
+        //     ),
+        // ],
       ),
       body: ContainedTabBarView(
         tabBarProperties: TabBarProperties(
@@ -47,7 +47,7 @@ class MenuPage extends StatelessWidget {
             padding: const EdgeInsets.only(top: 25),
           ),
           labelColor: Colors.red[900],
-          unselectedLabelColor: AppTheme.light.primaryColor,
+          unselectedLabelColor: Color.fromRGBO(203, 202, 205, 1),
         ),
         tabs: [
           Text('Dashboard', style: GoogleFonts.kanit()),
@@ -62,7 +62,7 @@ class MenuPage extends StatelessWidget {
                     flex: 1,
                     child: Container(
                         child: _submenu(context, "assets/images/mapbg.jpg",
-                            Icons.map, "Map", "/map"))),
+                            Icons.map, "MAP", "/map",'map'))),
                 Flexible(
                     flex: 2,
                     child: Container(
@@ -77,16 +77,18 @@ class MenuPage extends StatelessWidget {
                                         context,
                                         "assets/images/boat.jpg",
                                         Icons.directions_boat,
-                                        "Ship",
-                                        "/ship")),
+                                        "SHIP",
+                                        "/ship",
+                                        'ship')),
                                 Flexible(
                                     flex: 4,
                                     child: _submenu(
                                         context,
                                         "assets/images/news1.png",
                                         Icons.event_note_rounded,
-                                        "News",
-                                        "/news"))
+                                        "NEWS",
+                                        "/news",
+                                        'news'))
                               ],
                             ),
                           ),
@@ -97,18 +99,20 @@ class MenuPage extends StatelessWidget {
                                     flex: 4,
                                     child: _submenu(
                                         context,
-                                        "assets/images/bgmap.png",
-                                        Icons.map,
-                                        "package",
-                                        "/packages")),
+                                        "assets/images/pac.jpeg",
+                                        Icons.shopping_basket,
+                                        "PACKAGE",
+                                        "/packages",
+                                        'package')),
                                 Flexible(
                                     flex: 5,
                                     child: _submenu(
                                         context,
                                         "assets/images/profile.jpg",
                                         Icons.account_circle_rounded,
-                                        "User",
-                                        "/user"))
+                                        "USER",
+                                        "/user",
+                                        'user'))
                               ],
                             ),
                           )
@@ -126,38 +130,41 @@ class MenuPage extends StatelessWidget {
   }
 }
 
-_submenu(context, image, icon, title, route) {
+_submenu(context, image, icon, title, route,hero) {
   return GestureDetector(
     onTap: () {
       Navigator.pushNamed(context, route);
     },
-    child: Container(
-      padding: EdgeInsets.all(15),
-      margin: EdgeInsets.all(8),
-      decoration: BoxDecoration(
-        color: AppTheme.light.primaryColor,
-        // image: DecorationImage(
-        //   image: AssetImage(image),
-        //   fit: BoxFit.cover,
-        // ),
-        borderRadius: BorderRadius.circular(30),
-      ),
-      width: double.infinity,
-      height: double.infinity,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Icon(icon, size: 40, color: Colors.white),
-          Container(
-            margin: EdgeInsets.only(left: 5, bottom: 5),
-            child: Text(
-              title,
-              style: GoogleFonts.kanit(
-                  textStyle: TextStyle(fontSize: 25, color: Colors.white)),
-            ),
-          )
-        ],
+    child: Hero(
+          tag: '$hero',
+          child: Container(
+        padding: EdgeInsets.all(15),
+        margin: EdgeInsets.all(8),
+        decoration: BoxDecoration(
+          color: AppTheme.light.primaryColor,
+          image: DecorationImage(
+            image: AssetImage(image),
+            fit: BoxFit.cover,
+          ),
+          borderRadius: BorderRadius.circular(30),
+        ),
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Icon(icon, size: 25, color: Colors.white),
+            Container(
+              margin: EdgeInsets.only(left: 5, bottom: 5),
+              child: Text(
+                title,
+                style: GoogleFonts.kanit(
+                    textStyle: TextStyle(fontSize: 20, color: Colors.white,fontWeight: FontWeight.bold)),
+              ),
+            )
+          ],
+        ),
       ),
     ),
   );

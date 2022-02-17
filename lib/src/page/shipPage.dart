@@ -108,51 +108,54 @@ class _SecondPageState extends State<SecondPage> {
         ),
       ),
       body: Container(
-        padding: EdgeInsets.all(18),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            Container(
-              margin: EdgeInsets.only(right: 8),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                   Padding(
-                     padding: const EdgeInsets.all(8.0),
-                     child: FaIcon(
-                              FontAwesomeIcons.ship,
-                              color: Color.fromRGBO(93, 90, 97, 1),
-                              size: 20,
-                            ),
-                   ),
-                  Text(
-                    "จำนวนเรือ 2 ลำ",
-                    style: GoogleFonts.kanit(
-                  textStyle:TextStyle(
+          padding: EdgeInsets.all(18),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+      Hero(
+        tag: 'ship',
+              child: Container(
+          margin: EdgeInsets.only(right: 8),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+               Padding(
+                 padding: const EdgeInsets.all(8.0),
+                 child: FaIcon(
+                          FontAwesomeIcons.ship,
                           color: Color.fromRGBO(93, 90, 97, 1),
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600)),
-                  ),
-                ],
+                          size: 20,
+                        ),
+               ),
+              Text(
+                "จำนวนเรือ 2 ลำ",
+                style: GoogleFonts.kanit(
+              textStyle:TextStyle(
+                      color: Color.fromRGBO(93, 90, 97, 1),
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600)),
               ),
+            ],
+          ),
+        ),
+      ),
+      Flexible(
+        child: ListView(
+          children: <Widget>[
+            _Card(
+              context,
+              Color.fromRGBO(166, 210, 204, 1),
             ),
-            Flexible(
-              child: ListView(
-                children: <Widget>[
-                  _Card(
-                    context,
-                    Color.fromRGBO(166, 210, 204, 1),
-                  ),
-                  _Card(
-                    context,
-                    Color.fromRGBO(237, 116, 108, 1),
-                  )
-                ],
-              ),
-            ),
+            _Card(
+              context,
+              Color.fromRGBO(237, 116, 108, 1),
+            )
           ],
         ),
       ),
+            ],
+          ),
+        ),
     );
   }
 }
