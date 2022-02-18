@@ -4,6 +4,7 @@ import 'package:flutter_project_template/src/page/notification.dart';
 import 'package:flutter_project_template/src/page/packages.dart';
 
 var routes = {
+  LoginPage.routeName: (context) => LoginPage(),
   LauncherPage.routeName: (context) => LauncherPage(),
   MapPage.routeName: (context) => MapPage(),
   SecondPage.routeName: (context) => SecondPage(),

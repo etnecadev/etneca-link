@@ -8,12 +8,11 @@ class NewsComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Hero(
       tag: 'news',
-          child: Material(
-        
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: AnimationLimiter(
-          child: GridView.custom(
+      child: Material(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: AnimationLimiter(
+            child: GridView.custom(
                 gridDelegate: SliverWovenGridDelegate.count(
                   crossAxisCount: 2,
                   // mainAxisSpacing: 5,
@@ -41,15 +40,15 @@ class NewsComponent extends StatelessWidget {
                                   child: Padding(
                                     padding: const EdgeInsets.all(10.0),
                                     child: Text(
-                                      
                                         "'กรมเจ้าท่า'ไฟเขียว!รับอุทธรณ์ประมงพื้นบ้านกว่า 9 พันลำ ให้ตีทะเบียนใหม่ ขีดเส้น 15 วัน",
                                         softWrap: true,
                                         overflow: TextOverflow.fade,
                                         textAlign: TextAlign.justify,
-                                        style: GoogleFonts.kanit(textStyle:TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 17,
-                                            fontWeight: FontWeight.w600))),
+                                        style: GoogleFonts.kanit(
+                                            textStyle: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 17,
+                                                fontWeight: FontWeight.w600))),
                                   ),
                                 ),
                                 decoration: BoxDecoration(
@@ -63,8 +62,8 @@ class NewsComponent extends StatelessWidget {
                           ),
                         ),
                     childCount: 5)),
+          ),
         ),
-            ),
       ),
     );
   }

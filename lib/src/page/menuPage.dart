@@ -18,7 +18,7 @@ class MenuPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(203	,69	,73	 ,1),
         elevation: 0.0,
-        leading: SizedBox(),
+        automaticallyImplyLeading: false,
         title: Center(
             child: Text(
           "ETNECA LINK",
