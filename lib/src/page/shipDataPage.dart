@@ -32,24 +32,23 @@ class ShipDataPage extends StatelessWidget {
         title: Text(
           'Helix Test',
           style: GoogleFonts.kanit(textStyle:TextStyle(
-              color: Color.fromRGBO(93, 90, 97, 1),
+              color: Colors.red[900],
               fontSize: 20,
               fontWeight: FontWeight.w500)),
         ),
       ),
       body: Container(
         child: ContainedTabBarView(
-          tabBarProperties: TabBarProperties(
-            indicator: ContainerTabIndicator(
-              color: Color.fromRGBO(166, 210, 204, 1),
-              widthFraction: 0.3,
-              height: 4,
-              padding: const EdgeInsets.only(top: 15),
-            ),
-            indicatorColor: Colors.white,
-            labelColor: Color.fromRGBO(166, 210, 204, 1),
-            unselectedLabelColor: Color.fromRGBO(203, 202, 205, 1),
+         tabBarProperties: TabBarProperties(
+          indicator: ContainerTabIndicator(
+            color: AppTheme.light.primaryColor,
+            widthFraction: 0.8,
+            height: 4,
+            padding: const EdgeInsets.only(top: 25),
           ),
+          labelColor: Colors.red[900],
+          unselectedLabelColor: Color.fromRGBO(203, 202, 205, 1),
+        ),
           tabs: [
             Text('ข้อมูล VMS', style: GoogleFonts.kanit()),
             Text('สถานะอุปกณ์', style: GoogleFonts.kanit()),
