@@ -120,11 +120,11 @@ class _MapPageState extends State<MapPage> {
                       actions: <Widget>[
                         TextButton(
                           onPressed: () => Navigator.pop(context, 'Cancel'),
-                          child: const Text('Cancel'),
+                          child: const Text('ยกเลิก'),
                         ),
                         TextButton(
                           onPressed: () => Navigator.pop(context, 'OK'),
-                          child: const Text('OK'),
+                          child: const Text('ตกลง'),
                         ),
                       ],
                     )),
