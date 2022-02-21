@@ -23,54 +23,115 @@ class LoginPage extends StatelessWidget {
                 fit: BoxFit.cover,
               )),
               SizedBox(height: 60),
+              // Container(
+              //   padding: EdgeInsets.symmetric(horizontal: 30),
+              //   width: 350,
+              //   height: 60,
+              //   decoration: BoxDecoration(
+              //       gradient: LinearGradient(
+              //           begin: Alignment.topLeft, end: Alignment.topRight,
+              //           // colors: [Colors.red, Color.fromARGB(183, 255, 145, 145)]),
+              //           colors: [Colors.red, Colors.pink]),
+              //       borderRadius: BorderRadius.circular(100)),
+              //   child: Center(
+              //     child: TextField(
+              //       cursorColor: Colors.white,
+              //       style: GoogleFonts.kanit(
+              //           textStyle:
+              //               TextStyle(fontSize: 20, color: Colors.white)),
+              //       decoration: InputDecoration(
+              //           hintText: 'Username',
+              //           hintStyle: GoogleFonts.kanit(
+              //               textStyle:
+              //                   TextStyle(fontSize: 20, color: Colors.white)),
+              //           border: InputBorder.none),
+              //     ),
+              //   ),
+              // ),
+              // SizedBox(height: 20),
+              // Container(
+              //   padding: EdgeInsets.symmetric(horizontal: 30),
+              //   width: 350,
+              //   height: 60,
+              //   decoration: BoxDecoration(
+              //       gradient: LinearGradient(
+              //           begin: Alignment.topLeft,
+              //           end: Alignment.topRight,
+              //           colors: [Colors.red, Colors.pink]),
+              //       borderRadius: BorderRadius.circular(100)),
+              //   child: Center(
+              //     child: TextField(
+              //       cursorColor: Colors.white,
+              //       style: GoogleFonts.kanit(
+              //           textStyle:
+              //               TextStyle(fontSize: 20, color: Colors.white)),
+              //       decoration: InputDecoration(
+              //           hintText: 'Password',
+              //           hintStyle: GoogleFonts.kanit(
+              //               textStyle:
+              //                   TextStyle(fontSize: 20, color: Colors.white)),
+              //           border: InputBorder.none),
+              //     ),
+              //   ),
+              // ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 30),
+                padding: EdgeInsets.all(2),
                 width: 350,
                 height: 60,
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
-                        begin: Alignment.topLeft, end: Alignment.topRight,
+                        begin: Alignment.centerLeft, end: Alignment.centerRight,
                         // colors: [Colors.red, Color.fromARGB(183, 255, 145, 145)]),
-                        colors: [Colors.red, Colors.pink]),
+                        colors: [Colors.red, Colors.pinkAccent]),
                     borderRadius: BorderRadius.circular(100)),
-                child: Center(
-                  child: TextField(
-                    cursorColor: Colors.white,
-                    style: GoogleFonts.kanit(
-                        textStyle:
-                            TextStyle(fontSize: 20, color: Colors.white)),
-                    decoration: InputDecoration(
-                        hintText: 'Username',
-                        hintStyle: GoogleFonts.kanit(
-                            textStyle:
-                                TextStyle(fontSize: 20, color: Colors.white)),
-                        border: InputBorder.none),
+                child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(100)),
+                  child: Center(
+                    child: TextField(
+                      cursorColor: Colors.red,
+                      style: GoogleFonts.kanit(
+                          textStyle: TextStyle(fontSize: 15, color: Colors.red)),
+                      decoration: InputDecoration(
+                          hintText: 'Username',
+                          hintStyle: GoogleFonts.kanit(
+                              textStyle:
+                                  TextStyle(fontSize: 15, color: Colors.red)),
+                          border: InputBorder.none),
+                    ),
                   ),
                 ),
               ),
               SizedBox(height: 20),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 30),
+                padding: EdgeInsets.all(2),
                 width: 350,
                 height: 60,
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.topRight,
-                        colors: [Colors.red, Colors.pink]),
+                        begin: Alignment.centerLeft, end: Alignment.centerRight,
+                        // colors: [Colors.red, Color.fromARGB(183, 255, 145, 145)]),
+                        colors: [Colors.red, Colors.pinkAccent]),
                     borderRadius: BorderRadius.circular(100)),
-                child: Center(
-                  child: TextField(
-                    cursorColor: Colors.white,
-                    style: GoogleFonts.kanit(
-                        textStyle:
-                            TextStyle(fontSize: 20, color: Colors.white)),
-                    decoration: InputDecoration(
-                        hintText: 'Password',
-                        hintStyle: GoogleFonts.kanit(
-                            textStyle:
-                                TextStyle(fontSize: 20, color: Colors.white)),
-                        border: InputBorder.none),
+                child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(100)),
+                  child: Center(
+                    child: TextField(
+                      cursorColor: Colors.red,
+                      style: GoogleFonts.kanit(
+                          textStyle: TextStyle(fontSize: 15, color: Colors.red)),
+                      decoration: InputDecoration(
+                          hintText: 'Password',
+                          hintStyle: GoogleFonts.kanit(
+                              textStyle:
+                                  TextStyle(fontSize: 15, color: Colors.red)),
+                          border: InputBorder.none),
+                    ),
                   ),
                 ),
               ),
@@ -88,13 +149,16 @@ class LoginPage extends StatelessWidget {
                   width: 350,
                   height: 60,
                   decoration: BoxDecoration(
-                      color: AppTheme.light.primaryColor,
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft, end: Alignment.bottomRight,
+                        // colors: [Colors.red, Color.fromARGB(183, 255, 145, 145)]),
+                        colors: [Colors.red, Colors.pinkAccent]),
                       borderRadius: BorderRadius.circular(100)),
                   child: Center(
-                    child: Text("Sing In",
+                    child: Text("Sign In",
                         style: GoogleFonts.kanit(
                           textStyle:
-                              TextStyle(fontSize: 25, color: Colors.white),
+                              TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.w400),
                         )),
                   ),
                 ),

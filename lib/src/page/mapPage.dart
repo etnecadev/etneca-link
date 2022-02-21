@@ -21,6 +21,8 @@ class _MapPageState extends State<MapPage> {
     super.initState();
   }
 
+  
+
   @override
   Widget build(BuildContext context) {
     if (defaultTargetPlatform == TargetPlatform.android) {
@@ -56,8 +58,12 @@ class _MapPageState extends State<MapPage> {
         children: [
           Container(
             child: GoogleMap(
+              mapType: MapType.normal,
               initialCameraPosition:
-                  const CameraPosition(target: LatLng(0.0, 0.0)),
+                  CameraPosition(
+    target: LatLng(13.736717, 100.523186),
+    zoom: 5,
+  )
             ),
           ),
           // Center(
