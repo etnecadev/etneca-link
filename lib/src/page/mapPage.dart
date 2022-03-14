@@ -1,9 +1,13 @@
+import 'dart:async';
+
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_project_template/src/page/index.dart';
+import 'package:geojson/geojson.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -28,6 +32,64 @@ class _MapPageState extends State<MapPage> {
       AndroidGoogleMapsFlutter.useAndroidViewSurface = true;
     }
     var _controller = TextEditingController();
+
+    List<LatLng> building = [
+      LatLng(20.736717, 100.523186),
+      LatLng(6.614309807555536, 99.25868941435428),
+      LatLng(6.613762946627261, 99.26013965130872),
+      LatLng(6.613729233823868, 99.26022925125014),
+      LatLng(6.613705839932422, 99.26029022253417),
+      LatLng(6.613667301522092, 99.26038846878859),
+    ];
+
+    //     List<LatLng> buildingii = [
+    //   LatLng(20.736717, 100.523186),
+    //   LatLng(21.836717, 100.0),
+    //   LatLng(22.936717, 100.523186),
+    //   LatLng(23.936717, 100.523186),
+    //   LatLng(24.736717, 100.523186),
+    //   LatLng(25.336717, 100.523186),
+    // ];
+    final Set<Polyline> _campusOverlay = {};
+    final lines = <Polyline>[];
+
+    _campusOverlay.add(
+      Polyline(
+        polylineId: PolylineId('Building'),
+        visible: true,
+        points: building,
+        width: 2,
+        color: Colors.red,
+      ),
+    );
+
+    Future<void> processData() async {
+      final data = await rootBundle.loadString('assets/buffer05_final.geojson');
+      final geojson = GeoJson();
+      geojson.processedLines.listen((GeoJsonLine line) {
+        setState(() => lines.add(
+              Polyline(
+                polylineId: PolylineId('Buildingii'),
+                visible: true,
+                points: line.geoSerie?.toLatLng(),
+                width: 2,
+                color: Colors.red,
+              ),
+            ));
+      });
+      geojson.endSignal.listen((_) => geojson.dispose());
+      unawaited(geojson.parse(data, verbose: true));
+    }
+
+    //     _campusOverlay.add(
+    //   Polyline(
+    //     polylineId: PolylineId('Buildingii'),
+    //     visible: true,
+    //     points: buildingii,
+    //     width: 2,
+    //     color: Colors.red,
+    //   ),
+    // );
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -138,6 +200,7 @@ class _MapPageState extends State<MapPage> {
           Container(
             child: GoogleMap(
                 mapType: MapType.normal,
+                polylines: _campusOverlay,
                 initialCameraPosition: CameraPosition(
                   target: LatLng(13.736717, 100.523186),
                   zoom: 5,
