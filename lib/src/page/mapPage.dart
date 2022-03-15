@@ -247,6 +247,8 @@
 //   }
 // }
 
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:geopoint/geopoint.dart';
 import 'package:pedantic/pedantic.dart';
@@ -300,11 +302,14 @@ class _MapPageState extends State<MapPage> {
         final poly = Polygon(
             points: geoSerie.toLatLng(ignoreErrors: true), color: Colors.blue);
         setState(() => polygons.add(poly));
+        print(geoSerie.name);
       }
     });
     geojson.endSignal.listen((bool _) => geojson.dispose());
     // The data is from https://datahub.io/core/geo-countries
     final data = await rootBundle.loadString(polygonValue);
+    var geo = jsonDecode(data.trim());
+    // print(geo['features'][0]['geometry']['type']);
     final nameProperty = "ADMIN";
     unawaited(geojson.parse(data, nameProperty: nameProperty, verbose: true));
   }
@@ -411,7 +416,7 @@ class _MapPageState extends State<MapPage> {
                                   }
                                 });
 
-                                print(dropdownValue);
+                                // print(dropdownValue);
                                 Navigator.pop(context, 'back');
                               },
                               items: <String>[
